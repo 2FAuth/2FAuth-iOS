@@ -1,0 +1,14 @@
+2FAuth stores all your data locally on your device (or in encrypted form in Apple iCloud if it was enabled). 2FAuth does not collect or transfer any personal information.
+
+
+CloudKit and iCloud
+
+2FAuth may optionally use Apple CloudKit to sync data between your Apple devices (iPhone, iPad and Apple Watch). Your data is stored in a private database, which is encrypted with an account-based key and additionally encrypted with a user-provided passphrase. Therefore, we do not have access to any data stored in your iCloud account. We also do not have access to your Apple ID.
+
+Revoke access / Delete data: You can revoke access to iCloud and delete all your data in the iOS Settings app on your iOS device.
+For more information visit Apple’s privacy policy: https://www.apple.com/legal/privacy
+
+
+Contact
+
+If you have questions regarding our privacy policy, please contact us: podkovyrin@gmail.com
