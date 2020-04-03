@@ -1,0 +1,12 @@
+[submodule "Base32"]
+	path = Base32
+	url = https://github.com/2FAuth/Base32.git
+	branch = develop
+[submodule "OneTimePassword"]
+	path = OneTimePassword
+	url = https://github.com/2FAuth/OneTimePassword.git
+	branch = 2fauth
+[submodule "Kronos"]
+	path = Kronos
+	url = https://github.com/2FAuth/Kronos
+	branch = 2fauth

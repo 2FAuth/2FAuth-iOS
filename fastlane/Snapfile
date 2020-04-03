@@ -1,0 +1,26 @@
+# https://docs.fastlane.tools/actions/snapshot/
+
+devices([
+  "iPhone SE",
+  "iPhone 8",
+  "iPhone 8 Plus",
+  "iPhone 11 Pro",
+  "iPhone 11 Pro Max",
+
+  "iPad Pro (9.7-inch)",
+  "iPad Pro (10.5-inch)",
+  "iPad Pro (11-inch) (2nd generation)",
+  "iPad Pro (12.9-inch) (2nd generation)",
+  "iPad Pro (12.9-inch) (3rd generation)",
+])
+
+languages([
+  "en-US",
+])
+
+project("TwoFAuth.xcodeproj")
+scheme("TwoFAuthScreenshots")
+
+output_directory("./fastlane/screenshots")
+
+clear_previous_screenshots(false)

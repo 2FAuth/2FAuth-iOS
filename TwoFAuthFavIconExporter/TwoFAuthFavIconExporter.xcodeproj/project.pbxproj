@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2ABA25C5242807FF0092AA78 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA25C4242807FF0092AA78 /* main.swift */; };
+		2ABA25CD242808930092AA78 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = 2ABA25CC242808930092AA78 /* Yams */; };
+		2ABA25D1242808E50092AA78 /* TFASites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA25CF242808E50092AA78 /* TFASites.xcdatamodeld */; };
+		2ABA25D4242808FD0092AA78 /* WebsiteEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA25D2242808FD0092AA78 /* WebsiteEntity+CoreDataClass.swift */; };
+		2ABA25D5242808FD0092AA78 /* WebsiteEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA25D3242808FD0092AA78 /* WebsiteEntity+CoreDataProperties.swift */; };
+		2ABA25FD2428114D0092AA78 /* DownloadIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA25FC2428114D0092AA78 /* DownloadIcons.swift */; };
+		2ABA25FF2428119E0092AA78 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA25FE2428119E0092AA78 /* Types.swift */; };
+		2ABA26012428137F0092AA78 /* FavIcon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABA26002428137F0092AA78 /* FavIcon.framework */; };
+		2ABA26022428137F0092AA78 /* FavIcon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABA26002428137F0092AA78 /* FavIcon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2ABA260F242878AE0092AA78 /* Cleanup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA260E242878AE0092AA78 /* Cleanup.swift */; };
+		2ABA2611242878E00092AA78 /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA2610242878E00092AA78 /* Fetch.swift */; };
+		2ABA2613242879230092AA78 /* HardcodedWebsites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA2612242879230092AA78 /* HardcodedWebsites.swift */; };
+		2ABA261524287FBC0092AA78 /* SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA261424287FBC0092AA78 /* SaveData.swift */; };
+		2ABA261C242917590092AA78 /* PostProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA261B242917590092AA78 /* PostProcessing.swift */; };
+		2ABA26292429CF910092AA78 /* NSImage+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA26282429CF910092AA78 /* NSImage+Utils.swift */; };
+		2ABA2A70242A07740092AA78 /* String+SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA2A6F242A07740092AA78 /* String+SHA256.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2ABA25BF242807FF0092AA78 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		2ABA26032428137F0092AA78 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2ABA26022428137F0092AA78 /* FavIcon.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2ABA25C1242807FF0092AA78 /* TwoFAuthFavIconExporter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TwoFAuthFavIconExporter; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ABA25C4242807FF0092AA78 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		2ABA25D0242808E50092AA78 /* TFASites.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TFASites.xcdatamodel; sourceTree = "<group>"; };
+		2ABA25D2242808FD0092AA78 /* WebsiteEntity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "WebsiteEntity+CoreDataClass.swift"; path = "../../TwoFAuth/Services/FavIconFetcher/Website Catalog/WebsiteEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2ABA25D3242808FD0092AA78 /* WebsiteEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "WebsiteEntity+CoreDataProperties.swift"; path = "../../TwoFAuth/Services/FavIconFetcher/Website Catalog/WebsiteEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2ABA25FC2428114D0092AA78 /* DownloadIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadIcons.swift; sourceTree = "<group>"; };
+		2ABA25FE2428119E0092AA78 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		2ABA26002428137F0092AA78 /* FavIcon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FavIcon.framework; path = Carthage/Build/Mac/FavIcon.framework; sourceTree = "<group>"; };
+		2ABA260E242878AE0092AA78 /* Cleanup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cleanup.swift; sourceTree = "<group>"; };
+		2ABA2610242878E00092AA78 /* Fetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetch.swift; sourceTree = "<group>"; };
+		2ABA2612242879230092AA78 /* HardcodedWebsites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardcodedWebsites.swift; sourceTree = "<group>"; };
+		2ABA261424287FBC0092AA78 /* SaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveData.swift; sourceTree = "<group>"; };
+		2ABA261B242917590092AA78 /* PostProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProcessing.swift; sourceTree = "<group>"; };
+		2ABA26282429CF910092AA78 /* NSImage+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Utils.swift"; sourceTree = "<group>"; };
+		2ABA2A6F242A07740092AA78 /* String+SHA256.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+SHA256.swift"; path = "../../TwoFAuth/Services/FavIconFetcher/String+SHA256.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2ABA25BE242807FF0092AA78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ABA25CD242808930092AA78 /* Yams in Frameworks */,
+				2ABA26012428137F0092AA78 /* FavIcon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2ABA25B8242807FE0092AA78 = {
+			isa = PBXGroup;
+			children = (
+				2ABA25C3242807FF0092AA78 /* TwoFAuthFavIconExporter */,
+				2ABA25F724280D280092AA78 /* Frameworks */,
+				2ABA25C2242807FF0092AA78 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2ABA25C2242807FF0092AA78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2ABA25C1242807FF0092AA78 /* TwoFAuthFavIconExporter */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2ABA25C3242807FF0092AA78 /* TwoFAuthFavIconExporter */ = {
+			isa = PBXGroup;
+			children = (
+				2ABA261624287FEF0092AA78 /* Routines */,
+				2ABA25CE242808B50092AA78 /* CoreData */,
+				2ABA25C4242807FF0092AA78 /* main.swift */,
+			);
+			path = TwoFAuthFavIconExporter;
+			sourceTree = "<group>";
+		};
+		2ABA25CE242808B50092AA78 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2ABA25CF242808E50092AA78 /* TFASites.xcdatamodeld */,
+				2ABA25D2242808FD0092AA78 /* WebsiteEntity+CoreDataClass.swift */,
+				2ABA25D3242808FD0092AA78 /* WebsiteEntity+CoreDataProperties.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		2ABA25F724280D280092AA78 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2ABA26002428137F0092AA78 /* FavIcon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2ABA261624287FEF0092AA78 /* Routines */ = {
+			isa = PBXGroup;
+			children = (
+				2ABA260E242878AE0092AA78 /* Cleanup.swift */,
+				2ABA25FC2428114D0092AA78 /* DownloadIcons.swift */,
+				2ABA2610242878E00092AA78 /* Fetch.swift */,
+				2ABA2612242879230092AA78 /* HardcodedWebsites.swift */,
+				2ABA261B242917590092AA78 /* PostProcessing.swift */,
+				2ABA261424287FBC0092AA78 /* SaveData.swift */,
+				2ABA25FE2428119E0092AA78 /* Types.swift */,
+				2ABA2A6F242A07740092AA78 /* String+SHA256.swift */,
+				2ABA26282429CF910092AA78 /* NSImage+Utils.swift */,
+			);
+			name = Routines;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2ABA25C0242807FF0092AA78 /* TwoFAuthFavIconExporter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2ABA25C8242807FF0092AA78 /* Build configuration list for PBXNativeTarget "TwoFAuthFavIconExporter" */;
+			buildPhases = (
+				2ABA25D62428098C0092AA78 /* Swift Format */,
+				2ABA25BD242807FF0092AA78 /* Sources */,
+				2ABA25BE242807FF0092AA78 /* Frameworks */,
+				2ABA25BF242807FF0092AA78 /* CopyFiles */,
+				2ABA26032428137F0092AA78 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TwoFAuthFavIconExporter;
+			packageProductDependencies = (
+				2ABA25CC242808930092AA78 /* Yams */,
+			);
+			productName = TwoFAuthFavIconExporter;
+			productReference = 2ABA25C1242807FF0092AA78 /* TwoFAuthFavIconExporter */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2ABA25B9242807FE0092AA78 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = 2FAuth;
+				TargetAttributes = {
+					2ABA25C0242807FF0092AA78 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = 2ABA25BC242807FE0092AA78 /* Build configuration list for PBXProject "TwoFAuthFavIconExporter" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2ABA25B8242807FE0092AA78;
+			packageReferences = (
+				2ABA25CB242808930092AA78 /* XCRemoteSwiftPackageReference "Yams" */,
+			);
+			productRefGroup = 2ABA25C2242807FF0092AA78 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2ABA25C0242807FF0092AA78 /* TwoFAuthFavIconExporter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2ABA25D62428098C0092AA78 /* Swift Format */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Format";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftformat >/dev/null; then\n    swiftformat TwoFAuthFavIconExporter\nelse\n    echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2ABA25BD242807FF0092AA78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ABA26292429CF910092AA78 /* NSImage+Utils.swift in Sources */,
+				2ABA25FD2428114D0092AA78 /* DownloadIcons.swift in Sources */,
+				2ABA2613242879230092AA78 /* HardcodedWebsites.swift in Sources */,
+				2ABA261524287FBC0092AA78 /* SaveData.swift in Sources */,
+				2ABA2611242878E00092AA78 /* Fetch.swift in Sources */,
+				2ABA25D5242808FD0092AA78 /* WebsiteEntity+CoreDataProperties.swift in Sources */,
+				2ABA25D1242808E50092AA78 /* TFASites.xcdatamodeld in Sources */,
+				2ABA25FF2428119E0092AA78 /* Types.swift in Sources */,
+				2ABA260F242878AE0092AA78 /* Cleanup.swift in Sources */,
+				2ABA25C5242807FF0092AA78 /* main.swift in Sources */,
+				2ABA2A70242A07740092AA78 /* String+SHA256.swift in Sources */,
+				2ABA25D4242808FD0092AA78 /* WebsiteEntity+CoreDataClass.swift in Sources */,
+				2ABA261C242917590092AA78 /* PostProcessing.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2ABA25C6242807FF0092AA78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2ABA25C7242807FF0092AA78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		2ABA25C9242807FF0092AA78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6PMBQR35S8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2ABA25CA242807FF0092AA78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6PMBQR35S8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2ABA25BC242807FE0092AA78 /* Build configuration list for PBXProject "TwoFAuthFavIconExporter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ABA25C6242807FF0092AA78 /* Debug */,
+				2ABA25C7242807FF0092AA78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2ABA25C8242807FF0092AA78 /* Build configuration list for PBXNativeTarget "TwoFAuthFavIconExporter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ABA25C9242807FF0092AA78 /* Debug */,
+				2ABA25CA242807FF0092AA78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2ABA25CB242808930092AA78 /* XCRemoteSwiftPackageReference "Yams" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jpsim/Yams.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2ABA25CC242808930092AA78 /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2ABA25CB242808930092AA78 /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		2ABA25CF242808E50092AA78 /* TFASites.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2ABA25D0242808E50092AA78 /* TFASites.xcdatamodel */,
+			);
+			currentVersion = 2ABA25D0242808E50092AA78 /* TFASites.xcdatamodel */;
+			name = TFASites.xcdatamodeld;
+			path = "../../TwoFAuth/Services/FavIconFetcher/Website Catalog/TFASites.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2ABA25B9242807FE0092AA78 /* Project object */;
+}

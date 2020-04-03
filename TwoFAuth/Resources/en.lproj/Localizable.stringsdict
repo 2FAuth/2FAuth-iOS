@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>try again in X minute(s)</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@minute@</string>
+		<key>minute</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>ld</string>
+			<key>one</key>
+			<string>try again in %ld minute</string>
+			<key>other</key>
+			<string>try again in %ld minutes</string>
+		</dict>
+	</dict>
+	<key>X attempt(s) left</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@attempt@</string>
+		<key>attempt</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>u</string>
+			<key>one</key>
+			<string>%u attempt left</string>
+			<key>other</key>
+			<string>%u attempts left</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

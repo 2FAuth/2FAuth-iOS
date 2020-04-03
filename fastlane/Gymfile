@@ -1,0 +1,5 @@
+scheme "TwoFAuth"
+clean true
+export_options(
+  method: "app-store"
+)
