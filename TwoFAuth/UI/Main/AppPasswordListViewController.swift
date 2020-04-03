@@ -38,7 +38,12 @@ final class AppPasswordListViewController: PasswordListViewController, PasswordM
 
     override func performDiffReload(old: MainDataSource, new: MainDataSource, update: () -> Void) {
         let changes = diff(old: old.items, new: new.items)
-        tableView.reload(changes: changes, updateData: update)
+        if changes.isEmpty {
+            update()
+        }
+        else {
+            tableView.reload(changes: changes, updateData: update)
+        }
     }
 
     override func viewDidLoad() {
