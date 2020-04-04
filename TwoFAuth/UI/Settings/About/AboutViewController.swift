@@ -16,13 +16,13 @@
 //
 
 import MessageUI
-import StoreKit
 import UIKit
 
 final class AboutViewController: UIViewController {
     private static let github = "https://github.com/2FAuth/2FAuth-iOS"
     private static let copyright = "© 2020 Andrew Podkovyrin."
     private static let email = "podkovyrin@gmail.com"
+    private static let appStore = "https://itunes.apple.com/app/id1505207634?action=write-review"
 
     private lazy var headerView: UIView = {
         guard let iconImage = Bundle.main.icon else {
@@ -75,7 +75,12 @@ final class AboutViewController: UIViewController {
         model.title = LocalizedStrings.rate2FAuth
         model.titleStyle = .tinted
         model.action = { _ in
-            SKStoreReviewController.requestReview()
+            guard let url = URL(string: Self.appStore) else {
+                assert(false, "Invalid AppStore URL")
+                return
+            }
+
+            UIApplication.shared.open(url)
         }
         return model
     }()
