@@ -1906,6 +1906,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_DISPLAY_NAME = "2FAuth 🔨";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = TwoFAuth/Resources/2FAuth.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -1917,7 +1918,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.2fauth;
+				PRODUCT_BUNDLE_IDENTIFIER = app.2fauth.debug;
 				PRODUCT_MODULE_NAME = TwoFAuth;
 				PRODUCT_NAME = 2FAuth;
 				SWIFT_OBJC_BRIDGING_HEADER = "TwoFAuth/TwoFAuth-Bridging-Header.h";
@@ -1932,6 +1933,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_DISPLAY_NAME = 2FAuth;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = TwoFAuth/Resources/2FAuth.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -2018,6 +2020,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_DISPLAY_NAME = "2FAuth 📱";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = TwoFAuth/Resources/2FAuth.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -2029,7 +2032,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.2fauth;
+				PRODUCT_BUNDLE_IDENTIFIER = app.2fauth.screenshot;
 				PRODUCT_MODULE_NAME = TwoFAuth;
 				PRODUCT_NAME = 2FAuth;
 				SWIFT_OBJC_BRIDGING_HEADER = "TwoFAuth/TwoFAuth-Bridging-Header.h";
@@ -2099,7 +2102,7 @@
 					"@executable_path/../../Frameworks",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.2fauth.OneTimePasswordProvider;
+				PRODUCT_BUNDLE_IDENTIFIER = app.2fauth.debug.OneTimePasswordProvider;
 				PRODUCT_NAME = "One Time Password";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG APP_EXTENSION";
@@ -2124,7 +2127,7 @@
 					"@executable_path/../../Frameworks",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.2fauth.OneTimePasswordProvider;
+				PRODUCT_BUNDLE_IDENTIFIER = app.2fauth.screenshot.OneTimePasswordProvider;
 				PRODUCT_NAME = "One Time Password";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG APP_EXTENSION SCREENSHOT";
