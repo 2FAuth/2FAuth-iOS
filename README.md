@@ -11,6 +11,8 @@ Two-Factor Authenticator App you dream about.
 <img src="https://github.com/2FAuth/2FAuth-iOS/raw/master/.assets/screenshots.png?raw=true" alt="2FAuth Screenshots" height="320">
 </p>
 
+[![Download on the AppStore](https://linkmaker.itunes.apple.com/en-gb/badge-lrg.svg?releaseDate=2017-07-19&kind=iossoftware&bubble=ios_apps)](https://apps.apple.com/app/2fauth/id1505207634)
+
 ## Features
 
 * 100% free and fully open-sourced.
