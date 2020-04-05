@@ -154,8 +154,7 @@ class MainModel {
 
         // search has higher priority over matching
         if let searchQuery = searchQuery, searchQuery.isEmpty == false {
-            let trimmedQuery = searchQuery.trimmingCharacters(in: .whitespacesAndNewlines)
-            let persistentTokens = filteredTokens(persistentTokens: allTokens, for: trimmedQuery)
+            let persistentTokens = filteredTokens(persistentTokens: allTokens, for: searchQuery)
             return [persistentTokens]
         }
 
@@ -172,23 +171,19 @@ class MainModel {
         return [allTokens]
     }
 
-    private func trimmedSearchQuery() -> String? {
-        guard let searchQuery = searchQuery?.trimmingCharacters(in: .whitespacesAndNewlines),
-            !searchQuery.isEmpty else {
-            return nil
-        }
-        return searchQuery
-    }
-
     private func filteredTokens(persistentTokens: [PersistentToken], for query: String) -> [PersistentToken] {
-        if query.isEmpty {
+        let trimmedQuery = query.trimmingCharacters(in: .whitespacesAndNewlines)
+        if trimmedQuery.isEmpty {
             return persistentTokens
         }
 
-        let options: String.CompareOptions = [.caseInsensitive, .diacriticInsensitive]
-        return persistentTokens.filter {
-            $0.token.issuer.range(of: query, options: options) != nil ||
-                $0.token.name.range(of: query, options: options) != nil
+        let queryItems = trimmedQuery.components(separatedBy: " ")
+
+        return persistentTokens.filter { persistentToken in
+            queryItems.allSatisfy {
+                let token = persistentToken.token
+                return token.issuer.localizedStandardContains($0) || token.name.localizedStandardContains($0)
+            }
         }
     }
 }
