@@ -93,9 +93,11 @@ class MainModel {
             setTimer(fireAt: nextUpdateTime)
         }
 
+        let trimmedQuery = searchQuery?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+
         let sections = tokenSections.map { tokens in
             ItemsSection(items: tokens.map {
-                OneTimePassword(persistentToken: $0, date: date, groupSize: Constants.groupSize)
+                OneTimePassword(persistentToken: $0, searchQuery: trimmedQuery, date: date, groupSize: Constants.groupSize)
             })
         }
 

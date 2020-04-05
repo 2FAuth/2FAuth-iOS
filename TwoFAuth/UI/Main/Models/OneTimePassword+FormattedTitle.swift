@@ -42,6 +42,8 @@ extension OneTimePassword {
             let range = NSRange(location: 0, length: result.length)
             result.addAttributes(titleAttributes, range: range)
 
+            result.hightlightSearchQuery(searchQuery, highlightedTextColor: Styles.Colors.tint)
+
             result.endEditing()
 
             updateFormattedTitleValue(result)

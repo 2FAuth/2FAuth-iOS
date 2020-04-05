@@ -19,6 +19,7 @@ import Foundation
 
 final class OneTimePassword {
     let persistentToken: PersistentToken
+    let searchQuery: String
     var issuer: String { persistentToken.token.issuer }
 
     var account: String { persistentToken.token.name }
@@ -28,8 +29,10 @@ final class OneTimePassword {
 
     private var _formattedTitle: NSAttributedString?
 
-    init(persistentToken: PersistentToken, date: Date, groupSize: Int) {
+    init(persistentToken: PersistentToken, searchQuery: String, date: Date, groupSize: Int) {
         self.persistentToken = persistentToken
+        self.searchQuery = searchQuery
+
         let token = persistentToken.token
         let password = (try? token.generator.password(at: date)) ?? ""
         code = password.split(by: groupSize)

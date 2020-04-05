@@ -98,6 +98,8 @@
 		2A5E453D243A0275006BA067 /* PasswordListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E453C243A0275006BA067 /* PasswordListHeaderView.swift */; };
 		2A5E453E243A02E6006BA067 /* PasswordListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E453C243A0275006BA067 /* PasswordListHeaderView.swift */; };
 		2A5E4540243A0C0C006BA067 /* CloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E453F243A0C0C006BA067 /* CloudManager.swift */; };
+		2A5E4542243A3463006BA067 /* NSMutableAttributedString+HighlightQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E4541243A3463006BA067 /* NSMutableAttributedString+HighlightQuery.swift */; };
+		2A5E4543243A5C07006BA067 /* NSMutableAttributedString+HighlightQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E4541243A3463006BA067 /* NSMutableAttributedString+HighlightQuery.swift */; };
 		2A5E867223F83CD300027EB8 /* PasscodeSettingsFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E867123F83CD300027EB8 /* PasscodeSettingsFlowController.swift */; };
 		2A5E867423F8403400027EB8 /* PinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E867323F8403400027EB8 /* PinManager.swift */; };
 		2A5E867623F847C800027EB8 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E867523F847C800027EB8 /* ContainerViewController.swift */; };
@@ -410,6 +412,7 @@
 		2A5E44E62435CF44006BA067 /* NTPProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NTPProtocol.swift; path = Kronos/Sources/NTPProtocol.swift; sourceTree = "<group>"; };
 		2A5E453C243A0275006BA067 /* PasswordListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordListHeaderView.swift; sourceTree = "<group>"; };
 		2A5E453F243A0C0C006BA067 /* CloudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudManager.swift; sourceTree = "<group>"; };
+		2A5E4541243A3463006BA067 /* NSMutableAttributedString+HighlightQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+HighlightQuery.swift"; sourceTree = "<group>"; };
 		2A5E867123F83CD300027EB8 /* PasscodeSettingsFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeSettingsFlowController.swift; sourceTree = "<group>"; };
 		2A5E867323F8403400027EB8 /* PinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinManager.swift; sourceTree = "<group>"; };
 		2A5E867523F847C800027EB8 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
@@ -1029,6 +1032,7 @@
 				2A6DA5BA24329B6100590FE1 /* AppMainModel.swift */,
 				2AF7292022717987001D2D21 /* MainDataSource.swift */,
 				2AF7291E2271010A001D2D21 /* MainModel.swift */,
+				2A5E4541243A3463006BA067 /* NSMutableAttributedString+HighlightQuery.swift */,
 				2A218CC0226274AB0001E44C /* OneTimePassword.swift */,
 				2A6DA56724327C2F00590FE1 /* OneTimePassword+Diff.swift */,
 				2A6DA56B24327D7600590FE1 /* OneTimePassword+FormattedTitle.swift */,
@@ -1529,6 +1533,7 @@
 				2A2B6BAB241F93F600949270 /* TextInputTraits.swift in Sources */,
 				2A218CB8226237700001E44C /* Styles.swift in Sources */,
 				2A6DA56C24327D7600590FE1 /* OneTimePassword+FormattedTitle.swift in Sources */,
+				2A5E4542243A3463006BA067 /* NSMutableAttributedString+HighlightQuery.swift in Sources */,
 				2A92F0A923C6F717001ED209 /* WebsiteEntity+CoreDataProperties.swift in Sources */,
 				2A39E52922E4993E002EF75B /* AddOTPViewController.swift in Sources */,
 				2A5E44EB2435CF44006BA067 /* TimeStorage.swift in Sources */,
@@ -1716,6 +1721,7 @@
 				2A6DA5B9243299BA00590FE1 /* MainModel.swift in Sources */,
 				2A6DA5CA24331EF300590FE1 /* RootFlowController.swift in Sources */,
 				2A5E44FA2435CF44006BA067 /* NTPProtocol.swift in Sources */,
+				2A5E4543243A5C07006BA067 /* NSMutableAttributedString+HighlightQuery.swift in Sources */,
 				2A6DA5C32432A06A00590FE1 /* UIView+Containment.swift in Sources */,
 				2A6DA5C12432A04B00590FE1 /* MainFlowController.swift in Sources */,
 				2A5E44F82435CF44006BA067 /* InternetAddress.swift in Sources */,
