@@ -18,9 +18,10 @@
 import CloudSync
 import UIKit
 
-final class CloudSettingsViewController: FormHeaderViewController {
+final class CloudSettingsViewController: FormHeaderViewController, CloudManager {
+    let storage: SyncableStorage
+
     private let userDefaults: UserDefaults
-    private let storage: SyncableStorage
     private let cloudPassphrase: PinManager
     private let cloudConfig: CloudSync.Configuration
 
@@ -52,7 +53,9 @@ final class CloudSettingsViewController: FormHeaderViewController {
                 self.enaleCloudSync()
             }
             else {
-                self.disableCloudSync(sender: cell)
+                self.disableCloudSync(sender: cell, cancelCompletion: {
+                    self.reloadForm()
+                })
             }
         }
         return model
@@ -95,34 +98,13 @@ final class CloudSettingsViewController: FormHeaderViewController {
             storage.enableSync()
         }
         else {
-            let controller = CloudSetupFlowController(cloudPassphrase: cloudPassphrase, cloudConfig: cloudConfig)
+            let controller = CloudSetupFlowController(storage: storage,
+                                                      cloudPassphrase: cloudPassphrase,
+                                                      cloudConfig: cloudConfig)
             controller.delegate = self
             controller.modalPresentationStyle = .fullScreen
             present(controller, animated: true)
         }
-    }
-
-    private func disableCloudSync(sender: UIView) {
-        let actionSheet = UIAlertController(title: LocalizedStrings.disableCloudBackup,
-                                            message: LocalizedStrings.disableCloudBackupDescription,
-                                            preferredStyle: .actionSheet)
-
-        let deleteAction = UIAlertAction(title: LocalizedStrings.deleteDataFromCloud, style: .destructive) { _ in
-            self.storage.disableSync()
-        }
-        actionSheet.addAction(deleteAction)
-
-        let cancelAction = UIAlertAction(title: LocalizedStrings.cancel, style: .cancel) { _ in
-            self.reloadForm()
-        }
-        actionSheet.addAction(cancelAction)
-
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            actionSheet.popoverPresentationController?.sourceView = sender
-            actionSheet.popoverPresentationController?.sourceRect = sender.bounds
-        }
-
-        present(actionSheet, animated: true)
     }
 }
 

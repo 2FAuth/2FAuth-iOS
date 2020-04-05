@@ -81,6 +81,7 @@ enum LocalizedStrings {
     static let addNewOneTimePasswordFormat = NSLocalizedString("Do you want to add a one-time password for \"%@\"?", comment: "")
     static let matched = NSLocalizedString("Matched", comment: "Items matching search query")
     static let nonmatched = NSLocalizedString("Nonmatched", comment: "Items not matching search query")
+    static let tryAgain = NSLocalizedString("Try Again", comment: "")
 
     static let about = NSLocalizedString("About", comment: "")
     static let thisAppIsOpenSource = NSLocalizedString("This app is open source", comment: "")

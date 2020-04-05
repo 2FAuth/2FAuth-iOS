@@ -24,8 +24,10 @@ protocol CloudSetupFlowControllerDelegate: AnyObject {
     func cloudSetupFlowDidCancel(_ controller: CloudSetupFlowController)
 }
 
-final class CloudSetupFlowController: UIViewController {
+final class CloudSetupFlowController: UIViewController, CloudManager {
     weak var delegate: CloudSetupFlowControllerDelegate?
+
+    let storage: SyncableStorage
 
     private let cloudPassphrase: PinManager
     private let cloudProbe: CloudProbe
@@ -34,7 +36,8 @@ final class CloudSetupFlowController: UIViewController {
         UINavigationController()
     }()
 
-    init(cloudPassphrase: PinManager, cloudConfig: CloudSync.Configuration) {
+    init(storage: SyncableStorage, cloudPassphrase: PinManager, cloudConfig: CloudSync.Configuration) {
+        self.storage = storage
         self.cloudPassphrase = cloudPassphrase
         cloudProbe = CloudProbe(configuration: cloudConfig)
 
@@ -88,7 +91,7 @@ extension CloudSetupFlowController {
                 }
             case let .failure(error):
                 self.showPinSetupController()
-                self.display(error)
+                self.displayCloudProbeFailure(error)
             }
         }
     }
@@ -112,6 +115,21 @@ extension CloudSetupFlowController {
         controller.navigationItem.leftBarButtonItem = doneButton
         controller.title = LocalizedStrings.iCloudBackup
         rootNavigationController.setViewControllers([controller], animated: animated)
+    }
+
+    private func displayCloudProbeFailure(_ error: Error) {
+        let alert = UIAlertController(error: error)
+        let tryAgainAction = UIAlertAction(title: LocalizedStrings.tryAgain, style: .cancel)
+        alert.addAction(tryAgainAction)
+
+        let resetAction = UIAlertAction(title: LocalizedStrings.deleteDataFromCloud, style: .destructive) { _ in
+            self.disableCloudSync(sender: nil)
+        }
+        alert.addAction(resetAction)
+
+        alert.preferredAction = tryAgainAction
+
+        present(alert, animated: true)
     }
 
     @objc

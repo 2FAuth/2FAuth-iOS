@@ -97,6 +97,7 @@
 		2A5E44FA2435CF44006BA067 /* NTPProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E44E62435CF44006BA067 /* NTPProtocol.swift */; };
 		2A5E453D243A0275006BA067 /* PasswordListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E453C243A0275006BA067 /* PasswordListHeaderView.swift */; };
 		2A5E453E243A02E6006BA067 /* PasswordListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E453C243A0275006BA067 /* PasswordListHeaderView.swift */; };
+		2A5E4540243A0C0C006BA067 /* CloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E453F243A0C0C006BA067 /* CloudManager.swift */; };
 		2A5E867223F83CD300027EB8 /* PasscodeSettingsFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E867123F83CD300027EB8 /* PasscodeSettingsFlowController.swift */; };
 		2A5E867423F8403400027EB8 /* PinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E867323F8403400027EB8 /* PinManager.swift */; };
 		2A5E867623F847C800027EB8 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E867523F847C800027EB8 /* ContainerViewController.swift */; };
@@ -408,6 +409,7 @@
 		2A5E44E52435CF44006BA067 /* InternetAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InternetAddress.swift; path = Kronos/Sources/InternetAddress.swift; sourceTree = "<group>"; };
 		2A5E44E62435CF44006BA067 /* NTPProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NTPProtocol.swift; path = Kronos/Sources/NTPProtocol.swift; sourceTree = "<group>"; };
 		2A5E453C243A0275006BA067 /* PasswordListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordListHeaderView.swift; sourceTree = "<group>"; };
+		2A5E453F243A0C0C006BA067 /* CloudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudManager.swift; sourceTree = "<group>"; };
 		2A5E867123F83CD300027EB8 /* PasscodeSettingsFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeSettingsFlowController.swift; sourceTree = "<group>"; };
 		2A5E867323F8403400027EB8 /* PinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinManager.swift; sourceTree = "<group>"; };
 		2A5E867523F847C800027EB8 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
@@ -1105,6 +1107,7 @@
 			children = (
 				2A8A92D22413C51100CD9D64 /* CloudSetup */,
 				2ACED2A6230E75E0003CB498 /* CloudSettingsViewController.swift */,
+				2A5E453F243A0C0C006BA067 /* CloudManager.swift */,
 			);
 			path = iCloud;
 			sourceTree = "<group>";
@@ -1592,6 +1595,7 @@
 				2A5E44CB2435CF18006BA067 /* Token.swift in Sources */,
 				2ABA2A6E242A07630092AA78 /* String+SHA256.swift in Sources */,
 				2A6DA5C62432A23000590FE1 /* AppPasswordListViewController.swift in Sources */,
+				2A5E4540243A0C0C006BA067 /* CloudManager.swift in Sources */,
 				2A6DA5BB24329B6100590FE1 /* AppMainModel.swift in Sources */,
 				2AF9A30323FD7894003A46C6 /* Pin.swift in Sources */,
 				2A5E44D32435CF18006BA067 /* KeychainWrapper.swift in Sources */,
