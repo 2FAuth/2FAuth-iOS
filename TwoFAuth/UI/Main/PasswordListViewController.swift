@@ -37,6 +37,7 @@ class PasswordListViewController: UITableViewController, MainDataSourceControlle
 
     private lazy var measuringCell = OneTimePasswordCell(style: .default, reuseIdentifier: nil)
     private var cellHeightByPassword = [OneTimePassword: CGFloat]()
+    private var headerViewBySection = [Int: PasswordListHeaderView]()
 
     private let feedbackGenerator = UISelectionFeedbackGenerator()
 
@@ -52,6 +53,8 @@ class PasswordListViewController: UITableViewController, MainDataSourceControlle
     }
 
     func update(_ dataSource: MainDataSource) {
+        assert(dataSource.sections.count <= 2, "PasswordListViewController supports displaying two sections or less")
+
         cellHeightByPassword.removeAll()
 
         if isViewLoaded {
@@ -62,7 +65,7 @@ class PasswordListViewController: UITableViewController, MainDataSourceControlle
                 self.tableView.reloadData()
             }
 
-            if let old = self.dataSource, !old.items.isEmpty, view.window != nil {
+            if let old = self.dataSource, !old.isEmpty, view.window != nil {
                 performDiffReload(old: old, new: dataSource, update: update)
             }
             else {
@@ -93,11 +96,30 @@ class PasswordListViewController: UITableViewController, MainDataSourceControlle
                                        object: nil)
     }
 
+    // MARK: Private
+
+    private func oneTimePassword(for indexPath: IndexPath) -> OneTimePassword? {
+        guard let itemsSection = dataSource?.sections[indexPath.section] else {
+            return nil
+        }
+
+        return itemsSection.items[indexPath.row]
+    }
+
+    private func headerView(for section: Int) -> PasswordListHeaderView {
+        var view = headerViewBySection[section]
+        if view == nil {
+            view = PasswordListHeaderView()
+            headerViewBySection[section] = view
+        }
+        return view!
+    }
+
     // MARK: Notifications
 
     @objc
     private func contentSizeCategoryDidChangeNotification() {
-        dataSource?.items.forEach { $0.resetFormattedValues() }
+        dataSource?.sections.forEach { $0.items.forEach { $0.resetFormattedValues() } }
         cellHeightByPassword.removeAll()
         tableView.reloadData()
     }
@@ -106,8 +128,13 @@ class PasswordListViewController: UITableViewController, MainDataSourceControlle
 // MARK: UITableViewDataSource
 
 extension PasswordListViewController {
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        dataSource?.sections.count ?? 0
+    }
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        dataSource?.items.count ?? 0
+        let itemsSection = dataSource?.sections[section]
+        return itemsSection?.items.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -116,7 +143,7 @@ extension PasswordListViewController {
             preconditionFailure("invalid OneTimePassword cell type")
         }
 
-        guard let oneTimePassword = dataSource?.items[indexPath.row] else {
+        guard let oneTimePassword = oneTimePassword(for: indexPath) else {
             preconditionFailure("invalid dataSource")
         }
 
@@ -131,8 +158,32 @@ extension PasswordListViewController {
 // MARK: UITableViewDelegate
 
 extension PasswordListViewController {
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if tableView.numberOfSections <= 1 {
+            return 0
+        }
+
+        let view = headerView(for: section)
+        return view.systemLayoutSizeFitting(tableView.bounds.size).height
+    }
+
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if tableView.numberOfSections <= 1 {
+            return nil
+        }
+
+        let view = headerView(for: section)
+        if section == 0 {
+            view.text = LocalizedStrings.matched
+        }
+        else {
+            view.text = LocalizedStrings.nonmatched
+        }
+        return view
+    }
+
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        guard let oneTimePassword = dataSource?.items[indexPath.row] else {
+        guard let oneTimePassword = oneTimePassword(for: indexPath) else {
             preconditionFailure("invalid dataSource")
         }
 
@@ -154,7 +205,7 @@ extension PasswordListViewController {
 
         feedbackGenerator.selectionChanged()
 
-        guard let oneTimePassword = dataSource?.items[indexPath.row] else {
+        guard let oneTimePassword = oneTimePassword(for: indexPath) else {
             preconditionFailure("invalid dataSource")
         }
 

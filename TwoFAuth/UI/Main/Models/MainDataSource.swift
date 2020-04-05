@@ -24,7 +24,18 @@ struct ProgressModel {
     var duration: TimeInterval { endTime.timeIntervalSince(startTime) }
 }
 
-struct MainDataSource {
+struct ItemsSection {
     let items: [OneTimePassword]
+}
+
+struct MainDataSource {
+    let sections: [ItemsSection]
     let progressModel: ProgressModel?
+
+    var isEmpty: Bool {
+        for section in sections where !section.items.isEmpty {
+            return true
+        }
+        return false
+    }
 }

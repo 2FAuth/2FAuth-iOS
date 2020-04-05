@@ -33,6 +33,12 @@ class MainModel {
         storage.persistentTokens.isEmpty
     }
 
+    var matchQuery: String? {
+        didSet {
+            update()
+        }
+    }
+
     var searchQuery: String? {
         didSet {
             update()
@@ -64,14 +70,11 @@ class MainModel {
 
     @objc
     func update() {
-        assert(delegate != nil)
+        guard let delegate = delegate else { return }
 
-        let query = trimmedSearchQuery()
-        let persistentTokens = filteredTokens(persistentTokens: storage.persistentTokens, for: query)
+        let tokenSections = persistentTokenSections()
+        let persistentTokens = tokenSections.reduce([], +)
         let date = DateTime.current.date
-        let items = persistentTokens.map {
-            OneTimePassword(persistentToken: $0, date: date, groupSize: Constants.groupSize)
-        }
 
         let progressModel: ProgressModel?
         if persistentTokens.isEmpty {
@@ -90,8 +93,14 @@ class MainModel {
             setTimer(fireAt: nextUpdateTime)
         }
 
-        let dataSource = MainDataSource(items: items, progressModel: progressModel)
-        delegate?.mainModel(self, didUpdateDataSource: dataSource)
+        let sections = tokenSections.map { tokens in
+            ItemsSection(items: tokens.map {
+                OneTimePassword(persistentToken: $0, date: date, groupSize: Constants.groupSize)
+            })
+        }
+
+        let dataSource = MainDataSource(sections: sections, progressModel: progressModel)
+        delegate.mainModel(self, didUpdateDataSource: dataSource)
     }
 
     func stopUpdates() {
@@ -140,6 +149,29 @@ class MainModel {
         updateTimer = timer
     }
 
+    private func persistentTokenSections() -> [[PersistentToken]] {
+        let allTokens = storage.persistentTokens
+
+        // search has higher priority over matching
+        if let searchQuery = searchQuery, searchQuery.isEmpty == false {
+            let trimmedQuery = searchQuery.trimmingCharacters(in: .whitespacesAndNewlines)
+            let persistentTokens = filteredTokens(persistentTokens: allTokens, for: trimmedQuery)
+            return [persistentTokens]
+        }
+
+        if let matchQuery = matchQuery, matchQuery.isEmpty == false {
+            let matchedTokens = filteredTokens(persistentTokens: allTokens, for: matchQuery)
+            if matchedTokens.isEmpty || matchedTokens.count == allTokens.count {
+                return [allTokens]
+            }
+
+            let notMatchedTokens = allTokens.filter { matchedTokens.contains($0) == false }
+            return [matchedTokens, notMatchedTokens]
+        }
+
+        return [allTokens]
+    }
+
     private func trimmedSearchQuery() -> String? {
         guard let searchQuery = searchQuery?.trimmingCharacters(in: .whitespacesAndNewlines),
             !searchQuery.isEmpty else {
@@ -148,10 +180,11 @@ class MainModel {
         return searchQuery
     }
 
-    private func filteredTokens(persistentTokens: [PersistentToken], for query: String?) -> [PersistentToken] {
-        guard let query = query else {
+    private func filteredTokens(persistentTokens: [PersistentToken], for query: String) -> [PersistentToken] {
+        if query.isEmpty {
             return persistentTokens
         }
+
         let options: String.CompareOptions = [.caseInsensitive, .diacriticInsensitive]
         return persistentTokens.filter {
             $0.token.issuer.range(of: query, options: options) != nil ||

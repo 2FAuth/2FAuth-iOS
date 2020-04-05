@@ -95,6 +95,8 @@
 		2A5E44F82435CF44006BA067 /* InternetAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E44E52435CF44006BA067 /* InternetAddress.swift */; };
 		2A5E44F92435CF44006BA067 /* NTPProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E44E62435CF44006BA067 /* NTPProtocol.swift */; };
 		2A5E44FA2435CF44006BA067 /* NTPProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E44E62435CF44006BA067 /* NTPProtocol.swift */; };
+		2A5E453D243A0275006BA067 /* PasswordListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E453C243A0275006BA067 /* PasswordListHeaderView.swift */; };
+		2A5E453E243A02E6006BA067 /* PasswordListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E453C243A0275006BA067 /* PasswordListHeaderView.swift */; };
 		2A5E867223F83CD300027EB8 /* PasscodeSettingsFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E867123F83CD300027EB8 /* PasscodeSettingsFlowController.swift */; };
 		2A5E867423F8403400027EB8 /* PinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E867323F8403400027EB8 /* PinManager.swift */; };
 		2A5E867623F847C800027EB8 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E867523F847C800027EB8 /* ContainerViewController.swift */; };
@@ -405,6 +407,7 @@
 		2A5E44E42435CF44006BA067 /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Clock.swift; path = Kronos/Sources/Clock.swift; sourceTree = "<group>"; };
 		2A5E44E52435CF44006BA067 /* InternetAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InternetAddress.swift; path = Kronos/Sources/InternetAddress.swift; sourceTree = "<group>"; };
 		2A5E44E62435CF44006BA067 /* NTPProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NTPProtocol.swift; path = Kronos/Sources/NTPProtocol.swift; sourceTree = "<group>"; };
+		2A5E453C243A0275006BA067 /* PasswordListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordListHeaderView.swift; sourceTree = "<group>"; };
 		2A5E867123F83CD300027EB8 /* PasscodeSettingsFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeSettingsFlowController.swift; sourceTree = "<group>"; };
 		2A5E867323F8403400027EB8 /* PinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinManager.swift; sourceTree = "<group>"; };
 		2A5E867523F847C800027EB8 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
@@ -1209,6 +1212,7 @@
 			isa = PBXGroup;
 			children = (
 				2AF729262271EDA4001D2D21 /* NavigationTitleView.swift */,
+				2A5E453C243A0275006BA067 /* PasswordListHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1628,6 +1632,7 @@
 				2ACE88C122668BCE00ED24B5 /* AddOTPCameraViewController.swift in Sources */,
 				2AF7291F2271010A001D2D21 /* MainModel.swift in Sources */,
 				2A6F3012240007A300A50850 /* LockScreenInputViewController.swift in Sources */,
+				2A5E453D243A0275006BA067 /* PasswordListHeaderView.swift in Sources */,
 				2ACE887B2264A4AC00ED24B5 /* QRCodeProcessor.swift in Sources */,
 				2AF9A2FD23FD1D35003A46C6 /* SecureTime.swift in Sources */,
 				2A5E44D12435CF18006BA067 /* Crypto.swift in Sources */,
@@ -1662,6 +1667,7 @@
 				2A5E44F62435CF44006BA067 /* Clock.swift in Sources */,
 				2A6DA5922432854D00590FE1 /* PinFailedAttempt.swift in Sources */,
 				2A6DA5DB243352BD00590FE1 /* PinCodeKeyboardButton.swift in Sources */,
+				2A5E453E243A02E6006BA067 /* PasswordListHeaderView.swift in Sources */,
 				2A5E44E82435CF44006BA067 /* NTPPacket.swift in Sources */,
 				2A6DA58E2432852900590FE1 /* AuthenticationManager.swift in Sources */,
 				2A6DA5C024329F2500590FE1 /* UIView+Autolayout.swift in Sources */,

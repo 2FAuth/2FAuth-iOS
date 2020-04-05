@@ -33,6 +33,11 @@ final class ProviderRootFlowController: RootFlowController {
 
         super.init(authManager: services.authManager, mainController: controller)
 
+        fetchHostQueryFromCurrentContext { [weak self] hostQuery in
+            guard let self = self else { return }
+            self.model.matchQuery = hostQuery
+        }
+
         controller.delegate = self
         controller.navigationItem.leftBarButtonItem = createCancelButton()
     }
@@ -100,6 +105,47 @@ final class ProviderRootFlowController: RootFlowController {
             systemItem = .cancel
         }
         return UIBarButtonItem(barButtonSystemItem: systemItem, target: self, action: #selector(cancelAction))
+    }
+
+    /// Fetch a host string (e.g., 'github.com') from the context
+    /// - Parameter hostQueryIfFound: called once **only** in case baseURI param is found (first matched)
+    private func fetchHostQueryFromCurrentContext(hostQueryIfFound: @escaping (String?) -> Void) {
+        guard let inputItems = context?.inputItems as? [NSExtensionItem] else {
+            return
+        }
+
+        var reported = false
+
+        for inputItem in inputItems {
+            guard let attachments = inputItem.attachments else {
+                return
+            }
+
+            for itemProvider in attachments where itemProvider.hasItemConformingToTypeIdentifier(kUTTypePropertyList as String) {
+                itemProvider.loadItem(forTypeIdentifier: kUTTypePropertyList as String, options: nil) { result, _ in
+                    if let resultDict = result as? NSDictionary,
+                        let results = resultDict[NSExtensionJavaScriptPreprocessingResultsKey] as? NSDictionary,
+                        let urlString = results["baseURI"] as? String,
+                        let url = URL(string: urlString),
+                        let host = url.host {
+                        if !reported {
+                            var hostItems = host.split(separator: ".")
+                            // ignore top level domain
+                            if hostItems.count > 1 {
+                                hostItems = hostItems.dropLast()
+                            }
+                            let hostQuery = hostItems.joined(separator: " ")
+
+                            DispatchQueue.main.async {
+                                hostQueryIfFound(hostQuery)
+                            }
+
+                            reported = true
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

@@ -37,7 +37,19 @@ final class AppPasswordListViewController: PasswordListViewController, PasswordM
     }
 
     override func performDiffReload(old: MainDataSource, new: MainDataSource, update: () -> Void) {
-        let changes = diff(old: old.items, new: new.items)
+        assert(new.sections.count <= 1, "AppPasswordListViewController doesn't support multiple sections diff reload")
+
+        guard new.sections.count > 1 else {
+            update()
+            return
+        }
+
+        guard let oldItems = old.sections.first?.items, let newItems = new.sections.first?.items else {
+            update()
+            return
+        }
+
+        let changes = diff(old: oldItems, new: newItems)
         if changes.isEmpty {
             update()
         }
