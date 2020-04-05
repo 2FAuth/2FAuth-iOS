@@ -1926,7 +1926,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = TwoFAuth/Resources/2FAuth.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 42;
+				CURRENT_PROJECT_VERSION = 43;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6PMBQR35S8;
 				INFOPLIST_FILE = TwoFAuth/Resources/Info.plist;
@@ -1953,7 +1953,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = TwoFAuth/Resources/2FAuth.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 42;
+				CURRENT_PROJECT_VERSION = 43;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6PMBQR35S8;
 				INFOPLIST_FILE = TwoFAuth/Resources/Info.plist;
@@ -2040,7 +2040,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = TwoFAuth/Resources/2FAuth.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 42;
+				CURRENT_PROJECT_VERSION = 43;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6PMBQR35S8;
 				INFOPLIST_FILE = TwoFAuth/Resources/Info.plist;
@@ -2109,7 +2109,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppExtensionIcon;
 				CODE_SIGN_ENTITLEMENTS = OneTimePasswordProvider/Resources/OneTimePasswordProvider.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 42;
+				CURRENT_PROJECT_VERSION = 43;
 				DEVELOPMENT_TEAM = 6PMBQR35S8;
 				INFOPLIST_FILE = OneTimePasswordProvider/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -2134,7 +2134,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppExtensionIcon;
 				CODE_SIGN_ENTITLEMENTS = OneTimePasswordProvider/Resources/OneTimePasswordProvider.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 42;
+				CURRENT_PROJECT_VERSION = 43;
 				DEVELOPMENT_TEAM = 6PMBQR35S8;
 				INFOPLIST_FILE = OneTimePasswordProvider/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -2159,7 +2159,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppExtensionIcon;
 				CODE_SIGN_ENTITLEMENTS = OneTimePasswordProvider/Resources/OneTimePasswordProvider.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 42;
+				CURRENT_PROJECT_VERSION = 43;
 				DEVELOPMENT_TEAM = 6PMBQR35S8;
 				INFOPLIST_FILE = OneTimePasswordProvider/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
