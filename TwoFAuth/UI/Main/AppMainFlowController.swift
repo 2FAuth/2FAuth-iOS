@@ -36,7 +36,11 @@ final class AppMainFlowController: MainFlowController {
     }
 
     override func createMainDataSourceController() -> MainDataSourceController {
-        AppPasswordListViewController(storage: storage, userDefaults: userDefaults, favIconFetcher: favIconFetcher)
+        let controller = AppPasswordListViewController(storage: storage,
+                                                       userDefaults: userDefaults,
+                                                       favIconFetcher: favIconFetcher)
+        controller.editDelegate = self
+        return controller
     }
 
     override func controllerForPresentingAlert() -> UIViewController? {

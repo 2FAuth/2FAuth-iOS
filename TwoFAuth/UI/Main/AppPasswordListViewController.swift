@@ -80,6 +80,7 @@ final class AppPasswordListViewController: PasswordListViewController, PasswordM
             let cell = tableView.cellForRow(at: indexPath) as? OneTimePasswordCell,
             let persistentToken = cell.oneTimePassword?.persistentToken else { return }
 
+        assert(editDelegate != nil)
         editDelegate?.editPersistentToken(persistentToken)
     }
 }
@@ -98,6 +99,7 @@ extension AppPasswordListViewController {
 
         let edit = UIAction(title: LocalizedStrings.edit,
                             image: UIImage(systemName: "square.and.pencil")) { _ in
+            assert(self.editDelegate != nil)
             self.editDelegate?.editPersistentToken(persistentToken)
         }
 
