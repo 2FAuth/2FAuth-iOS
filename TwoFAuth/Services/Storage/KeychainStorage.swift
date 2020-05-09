@@ -101,29 +101,6 @@ extension KeychainStorage {
         let persistentIdentifiers = persistentTokens.map { $0.id }
         userDefaults.tokenPersistentIdentifiers = persistentIdentifiers
     }
-
-    func notifyUpdate() {
-        assert(Thread.isMainThread)
-
-        let notificationCenter = NotificationCenter.default
-        notificationCenter.post(name: StorageNotification.didUpdate, object: self)
-    }
 }
 
-// MARK: Order
-
-extension Sequence where Element == PersistentToken {
-    func sorted(withIdentifiersOrder identifiers: [String]) -> [PersistentToken] {
-        sorted(by: {
-            let indexOfA = identifiers.firstIndex(of: $0.id)
-            let indexOfB = identifiers.firstIndex(of: $1.id)
-
-            switch (indexOfA, indexOfB) {
-            case let (.some(iA), .some(iB)) where iA < iB:
-                return true
-            default:
-                return false
-            }
-        })
-    }
-}
+extension KeychainStorage: StorageUpdateNotifiable {}

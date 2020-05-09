@@ -33,23 +33,14 @@ class ProductionServices: Services {
     let authManager: AuthenticationManager
 
     init() {
-        userDefaults = Self.createUserDefaults()
-        favIconFetcher = FavIconFetcher()
+        userDefaults = UserDefaults.appGroupDefaults()
+        favIconFetcher = FavIconFetcher(userDefaults: userDefaults)
         storage = Self.createKeychainStorage(userDefaults: userDefaults)
         authManager = Self.createAuthenticationManager(userDefaults: userDefaults)
     }
 }
 
 extension Services {
-    static func createUserDefaults() -> UserDefaults {
-        if let userDefaults = UserDefaults(suiteName: AppGroup) {
-            return userDefaults
-        }
-
-        os_log("[!!!] Using standard UserDefaults", log: .default, type: .fault)
-        return UserDefaults.standard
-    }
-
     static func createKeychainStorage(userDefaults: UserDefaults) -> KeychainStorage {
         let keychain = OTPKeychain()
         do {

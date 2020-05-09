@@ -18,6 +18,10 @@
 import Foundation
 
 final class OneTimePassword {
+    enum GroupSize: Int {
+        case three = 3
+    }
+
     let persistentToken: PersistentToken
     let searchQuery: String
     var issuer: String { persistentToken.token.issuer }
@@ -29,13 +33,13 @@ final class OneTimePassword {
 
     private var _formattedTitle: NSAttributedString?
 
-    init(persistentToken: PersistentToken, searchQuery: String, date: Date, groupSize: Int) {
+    init(persistentToken: PersistentToken, searchQuery: String = "", date: Date, groupSize: GroupSize = .three) {
         self.persistentToken = persistentToken
         self.searchQuery = searchQuery
 
         let token = persistentToken.token
         let password = (try? token.generator.password(at: date)) ?? ""
-        code = password.split(by: groupSize)
+        code = password.split(by: groupSize.rawValue)
 
         if case .counter = token.generator.factor {
             canManualRefresh = true

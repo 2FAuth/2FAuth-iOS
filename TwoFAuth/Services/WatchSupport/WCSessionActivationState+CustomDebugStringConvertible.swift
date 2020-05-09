@@ -16,11 +16,19 @@
 //
 
 import Foundation
+import WatchConnectivity
 
-protocol Storage: ReadonlyStorage {
-    @discardableResult
-    func addToken(_ token: Token) throws -> PersistentToken
-    func updatePersistentToken(_ persistentToken: PersistentToken) throws
-    func moveTokenFromIndex(_ origin: Int, toIndex destination: Int)
-    func deletePersistentToken(_ persistentToken: PersistentToken) throws
+extension WCSessionActivationState: CustomDebugStringConvertible {
+    public var debugDescription: String {
+        switch self {
+        case .notActivated:
+            return "Not Activated"
+        case .inactive:
+            return "Inactive"
+        case .activated:
+            return "Activated"
+        @unknown default:
+            return "Unknown"
+        }
+    }
 }

@@ -27,3 +27,18 @@ struct DateTime {
         timeIntervalSince1970 = date.timeIntervalSince1970
     }
 }
+
+extension DateTime {
+    static var current: DateTime {
+        #if SCREENSHOT && !APP_EXTENSION
+            if CommandLine.isDemoMode {
+                return DateTime.demo
+            }
+            else {
+                return DateTime(date: Date())
+            }
+        #else
+            return DateTime(date: Date())
+        #endif /* SCREENSHOT */
+    }
+}

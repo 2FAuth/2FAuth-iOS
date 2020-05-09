@@ -18,7 +18,18 @@
 import Foundation
 import WatchKit
 
-class InterfaceController: WKInterfaceController {
+final class InterfaceController: WKInterfaceController {
+    var model: WatchModel? {
+        didSet {
+            model?.delegate = self
+            model?.update()
+        }
+    }
+
+    var favIconFetcher: WatchFavIconFetcher?
+
+    private var dataSource: WatchDataSource?
+
     @IBOutlet private var table: WKInterfaceTable!
 
     override func awake(withContext context: Any?) {
@@ -31,5 +42,25 @@ class InterfaceController: WKInterfaceController {
 
     override func didDeactivate() {
         super.didDeactivate()
+    }
+}
+
+extension InterfaceController: WatchModelDelegate {
+    func watchModel(_ model: WatchModel, didUpdateDataSource dataSource: WatchDataSource) {
+        self.dataSource = dataSource
+
+        let rowType = String(describing: OneTimePasswordRow.self)
+        table.setNumberOfRows(dataSource.items.count, withRowType: rowType)
+
+        guard let progressModel = dataSource.progressModel else {
+            assert(dataSource.items.isEmpty, "progressModel should exist")
+            return
+        }
+
+        for (index, oneTimePassword) in dataSource.items.enumerated() {
+            guard let row = table.rowController(at: index) as? OneTimePasswordRow else { return }
+            row.favIconFetcher = favIconFetcher
+            row.update(with: oneTimePassword, progressModel: progressModel)
+        }
     }
 }

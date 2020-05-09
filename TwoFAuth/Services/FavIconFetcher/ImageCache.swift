@@ -143,13 +143,17 @@ private extension UIImage {
     }
 
     static func imageOrientationFromImageData(imageData: Data) -> UIImage.Orientation {
-        guard let imageSource = CGImageSourceCreateWithData(imageData as CFData, nil),
-            let properties = CGImageSourceCopyPropertiesAtIndex(imageSource, 0, nil) as? [String: AnyObject],
-            let exifOrientation = properties[kCGImagePropertyOrientation as String] as? Int else {
-            return .up
-        }
+        #if os(iOS)
+            guard let imageSource = CGImageSourceCreateWithData(imageData as CFData, nil),
+                let properties = CGImageSourceCopyPropertiesAtIndex(imageSource, 0, nil) as? [String: AnyObject],
+                let exifOrientation = properties[kCGImagePropertyOrientation as String] as? Int else {
+                return .up
+            }
 
-        return exifOrientationToiOSOrientation(exifOrientation)
+            return exifOrientationToiOSOrientation(exifOrientation)
+        #else
+            return .up
+        #endif
     }
 
     static func exifOrientationToiOSOrientation(_ exifOrientation: Int) -> UIImage.Orientation {

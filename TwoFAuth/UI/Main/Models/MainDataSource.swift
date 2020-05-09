@@ -17,13 +17,6 @@
 
 import Foundation
 
-struct ProgressModel {
-    let startTime: Date
-    let endTime: Date
-
-    var duration: TimeInterval { endTime.timeIntervalSince(startTime) }
-}
-
 struct ItemsSection {
     let items: [OneTimePassword]
 }

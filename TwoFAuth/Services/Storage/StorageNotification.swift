@@ -17,10 +17,19 @@
 
 import Foundation
 
-protocol Storage: ReadonlyStorage {
-    @discardableResult
-    func addToken(_ token: Token) throws -> PersistentToken
-    func updatePersistentToken(_ persistentToken: PersistentToken) throws
-    func moveTokenFromIndex(_ origin: Int, toIndex destination: Int)
-    func deletePersistentToken(_ persistentToken: PersistentToken) throws
+enum StorageNotification {
+    static let didUpdate = Notification.Name("storageDidUpdateNotification")
+}
+
+protocol StorageUpdateNotifiable {
+    func notifyUpdate()
+}
+
+extension StorageUpdateNotifiable {
+    func notifyUpdate() {
+        assert(Thread.isMainThread)
+
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.post(name: StorageNotification.didUpdate, object: self)
+    }
 }

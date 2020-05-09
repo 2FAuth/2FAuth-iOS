@@ -3,7 +3,7 @@
     <device id="watch38"/>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="16012"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
     </dependencies>
@@ -18,25 +18,26 @@
                                 <tableRow identifier="OneTimePasswordRow" selectable="NO" id="M8l-Cp-Ouh" customClass="OneTimePasswordRow" customModule="WatchApp_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" radius="6" spacing="2" id="GQs-KH-fye" userLabel="Root Group">
                                         <items>
-                                            <group width="1" height="0.0" alignment="left" spacing="2" id="Xri-YH-0h6" userLabel="Details Group">
+                                            <group width="1" height="0.0" alignment="left" spacing="3" id="Xri-YH-0h6" userLabel="Details Group">
                                                 <items>
-                                                    <imageView width="24" height="24" alignment="left" verticalAlignment="center" image="0068362152be66a412a779cfcfdaea61b2bbdbbf1a4ed74df4b11f037182063b" id="WOj-rx-PW8"/>
+                                                    <imageView width="24" height="24" alignment="left" verticalAlignment="center" id="WOj-rx-PW8"/>
                                                     <group alignment="left" layout="vertical" spacing="2" id="rg2-1G-fpA" userLabel="Labels Group">
                                                         <items>
-                                                            <label alignment="left" text="Label" numberOfLines="0" id="foQ-kO-z8e">
-                                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                                            <label alignment="left" text="123 456" numberOfLines="0" id="foQ-kO-z8e">
+                                                                <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
                                                             </label>
                                                             <label alignment="left" verticalAlignment="bottom" text="Label" numberOfLines="0" id="qHF-UH-N1O">
+                                                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                                                 <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
                                                             </label>
                                                         </items>
                                                     </group>
                                                 </items>
-                                                <edgeInsets key="margins" left="3" right="3" top="0.0" bottom="0.0"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="2"/>
                                             </group>
                                             <group width="1" height="3" alignment="left" layout="overlap" radius="0.0" spacing="0.0" id="nbS-Ai-ZOj" userLabel="Progress Content Group">
                                                 <items>
-                                                    <group width="0.40000000000000002" height="3" alignment="left" radius="1" spacing="0.0" id="5pX-g3-gkT" userLabel="Progress Group">
+                                                    <group width="0.0" height="3" alignment="left" radius="1" spacing="0.0" id="5pX-g3-gkT" userLabel="Progress Group">
                                                         <color key="backgroundColor" name="TintColor"/>
                                                         <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                                                     </group>
@@ -49,6 +50,7 @@
                                     <connections>
                                         <outlet property="codeLabel" destination="foQ-kO-z8e" id="CD9-e6-qfy"/>
                                         <outlet property="iconImage" destination="WOj-rx-PW8" id="bP0-VD-JqA"/>
+                                        <outlet property="progressGroup" destination="5pX-g3-gkT" id="EZD-4N-gUT"/>
                                         <outlet property="titleLabel" destination="qHF-UH-N1O" id="LiW-jc-9Ka"/>
                                     </connections>
                                 </tableRow>
@@ -64,7 +66,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="0068362152be66a412a779cfcfdaea61b2bbdbbf1a4ed74df4b11f037182063b" width="32" height="32"/>
         <namedColor name="TintColor">
             <color red="0.097999997437000275" green="0.46299999952316284" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -76,7 +76,7 @@ final class QRScanner: NSObject, QRScannerProtocol {
     private var isCaptureSessionConfigured = false
     private var isQRCodeScanningPaused = true
 
-    private override init() {
+    override private init() {
         super.init()
     }
 

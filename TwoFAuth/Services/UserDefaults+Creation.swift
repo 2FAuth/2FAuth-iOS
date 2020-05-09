@@ -16,11 +16,15 @@
 //
 
 import Foundation
+import os.log
 
-protocol Storage: ReadonlyStorage {
-    @discardableResult
-    func addToken(_ token: Token) throws -> PersistentToken
-    func updatePersistentToken(_ persistentToken: PersistentToken) throws
-    func moveTokenFromIndex(_ origin: Int, toIndex destination: Int)
-    func deletePersistentToken(_ persistentToken: PersistentToken) throws
+extension UserDefaults {
+    static func appGroupDefaults() -> UserDefaults {
+        if let userDefaults = UserDefaults(suiteName: AppGroup) {
+            return userDefaults
+        }
+
+        os_log("[!!!] Using standard UserDefaults", log: .default, type: .fault)
+        return UserDefaults.standard
+    }
 }

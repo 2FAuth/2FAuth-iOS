@@ -35,15 +35,20 @@ class AppProductionServices: AppServices {
     let cloudConfig: CloudSync.Configuration
     let cloudPassphrase: PinManager
 
+    private let watchManager: WatchSessionManager
+
     init() {
-        userDefaults = ProductionServices.createUserDefaults()
-        favIconFetcher = FavIconFetcher()
+        userDefaults = UserDefaults.appGroupDefaults()
+        favIconFetcher = FavIconFetcher(userDefaults: userDefaults)
         cloudConfig = Self.createCloudSyncConfiguration()
         cloudPassphrase = Self.createCloudPassphrase()
         storage = Self.createAppStorage(userDefaults: userDefaults,
                                         cloudConfig: cloudConfig,
                                         cloudPassphrase: cloudPassphrase)
         authManager = ProductionServices.createAuthenticationManager(userDefaults: userDefaults)
+
+        watchManager = WatchSessionManager(storage: storage, userDefaults: userDefaults)
+        watchManager.start()
     }
 }
 

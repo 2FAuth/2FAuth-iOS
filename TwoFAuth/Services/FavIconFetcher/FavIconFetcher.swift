@@ -32,12 +32,17 @@ private final class FavIconOperation: FavIconCancellationToken {
 }
 
 final class FavIconFetcher {
+    private let userDefaults: UserDefaults
     private let imageCache = ImageCache()
     private let websiteCatalog = WebsiteCatalog()
     private var notFoundIssuers = Set<String>()
     private let imageProcessingQueue = DispatchQueue(label: AppDomain + ".faviconfetcher.queue", qos: .userInitiated)
     private let log = OSLog(subsystem: AppDomain, category: String(describing: FavIconFetcher.self))
     private static let iconsFolder = "WebsiteIcons"
+
+    init(userDefaults: UserDefaults) {
+        self.userDefaults = userDefaults
+    }
 
     @discardableResult
     func favicon(
@@ -111,6 +116,17 @@ final class FavIconFetcher {
                               operation: FavIconOperation,
                               iconCompletion: @escaping (UIImage?) -> Void,
                               blurredIconCompletion: ((UIImage?) -> Void)?) {
+        let favIconsByIssuer = userDefaults.favIconsByIssuer
+        if let iconName = favIconsByIssuer[issuer] {
+            fetchIcon(named: iconName,
+                      issuer: issuer,
+                      operation: operation,
+                      iconCompletion: iconCompletion,
+                      blurredIconCompletion: blurredIconCompletion)
+
+            return
+        }
+
         websiteCatalog.fetchWebsiteIconName(for: issuer) { [weak self] iconName in
             guard let self = self else { return }
             assert(Thread.isMainThread)
@@ -120,6 +136,10 @@ final class FavIconFetcher {
             }
 
             if let iconName = iconName {
+                var mutableFavIconsByIssuer = favIconsByIssuer
+                mutableFavIconsByIssuer[issuer] = iconName
+                self.userDefaults.favIconsByIssuer = mutableFavIconsByIssuer
+
                 self.fetchIcon(named: iconName,
                                issuer: issuer,
                                operation: operation,

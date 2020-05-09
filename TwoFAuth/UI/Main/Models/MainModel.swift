@@ -23,10 +23,6 @@ protocol MainModelDelegate: AnyObject {
 }
 
 class MainModel {
-    private enum Constants {
-        static let groupSize = 3
-    }
-
     weak var delegate: MainModelDelegate?
 
     var isEmpty: Bool {
@@ -81,23 +77,15 @@ class MainModel {
             progressModel = nil
         }
         else {
-            let lastUpdateTime = persistentTokens.reduce(.distantPast) { lastUpdateTime, persistentToken in
-                max(lastUpdateTime, persistentToken.lastUpdateTime(before: date))
-            }
-            let nextUpdateTime = persistentTokens.reduce(.distantFuture) { nextUpdateTime, persistentToken in
-                min(nextUpdateTime, persistentToken.nextUpdateTime(after: date))
-            }
-
-            progressModel = ProgressModel(startTime: lastUpdateTime, endTime: nextUpdateTime)
-
-            setTimer(fireAt: nextUpdateTime)
+            progressModel = ProgressModel(persistentTokens: persistentTokens, date: date)
+            setTimer(fireAt: progressModel!.endTime)
         }
 
         let trimmedQuery = searchQuery?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
 
         let sections = tokenSections.map { tokens in
             ItemsSection(items: tokens.map {
-                OneTimePassword(persistentToken: $0, searchQuery: trimmedQuery, date: date, groupSize: Constants.groupSize)
+                OneTimePassword(persistentToken: $0, searchQuery: trimmedQuery, date: date)
             })
         }
 
@@ -196,44 +184,5 @@ private extension MainModel {
     @objc
     func storageDidUpdateNotification(_ notification: Notification) {
         update()
-    }
-}
-
-private extension PersistentToken {
-    func lastUpdateTime(before date: Date) -> Date {
-        switch token.generator.factor {
-        case .counter:
-            return .distantPast
-        case let .timer(period):
-            let epoch = date.timeIntervalSince1970
-            let timeInterval = epoch - epoch.truncatingRemainder(dividingBy: period)
-            return Date(timeIntervalSince1970: timeInterval)
-        }
-    }
-
-    func nextUpdateTime(after date: Date) -> Date {
-        switch token.generator.factor {
-        case .counter:
-            return .distantFuture
-        case let .timer(period):
-            let epoch = date.timeIntervalSince1970
-            let timeInterval = epoch + (period - epoch.truncatingRemainder(dividingBy: period))
-            return Date(timeIntervalSince1970: timeInterval)
-        }
-    }
-}
-
-extension DateTime {
-    static var current: DateTime {
-        #if SCREENSHOT && !APP_EXTENSION
-            if CommandLine.isDemoMode {
-                return DateTime.demo
-            }
-            else {
-                return DateTime(date: Date())
-            }
-        #else
-            return DateTime(date: Date())
-        #endif /* SCREENSHOT */
     }
 }

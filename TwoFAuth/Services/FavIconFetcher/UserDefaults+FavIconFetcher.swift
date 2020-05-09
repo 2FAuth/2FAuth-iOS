@@ -17,10 +17,13 @@
 
 import Foundation
 
-protocol Storage: ReadonlyStorage {
-    @discardableResult
-    func addToken(_ token: Token) throws -> PersistentToken
-    func updatePersistentToken(_ persistentToken: PersistentToken) throws
-    func moveTokenFromIndex(_ origin: Int, toIndex destination: Int)
-    func deletePersistentToken(_ persistentToken: PersistentToken) throws
+extension UserDefaults {
+    private enum Keys {
+        static let favIconsByIssuerKey = AppDomain + ".favicons-by-issuer"
+    }
+
+    var favIconsByIssuer: [String: String] {
+        get { dictionary(forKey: Keys.favIconsByIssuerKey) as? [String: String] ?? [:] }
+        set { set(newValue, forKey: Keys.favIconsByIssuerKey) }
+    }
 }

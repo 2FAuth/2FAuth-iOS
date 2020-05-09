@@ -17,10 +17,6 @@
 
 import Foundation
 
-protocol Storage: ReadonlyStorage {
-    @discardableResult
-    func addToken(_ token: Token) throws -> PersistentToken
-    func updatePersistentToken(_ persistentToken: PersistentToken) throws
-    func moveTokenFromIndex(_ origin: Int, toIndex destination: Int)
-    func deletePersistentToken(_ persistentToken: PersistentToken) throws
+protocol ReadonlyStorage: AnyObject {
+    var persistentTokens: [PersistentToken] { get }
 }

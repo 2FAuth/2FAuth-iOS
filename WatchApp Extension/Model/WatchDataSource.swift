@@ -17,10 +17,7 @@
 
 import Foundation
 
-protocol Storage: ReadonlyStorage {
-    @discardableResult
-    func addToken(_ token: Token) throws -> PersistentToken
-    func updatePersistentToken(_ persistentToken: PersistentToken) throws
-    func moveTokenFromIndex(_ origin: Int, toIndex destination: Int)
-    func deletePersistentToken(_ persistentToken: PersistentToken) throws
+struct WatchDataSource {
+    let items: [OneTimePassword]
+    let progressModel: ProgressModel?
 }

@@ -17,10 +17,18 @@
 
 import Foundation
 
-protocol Storage: ReadonlyStorage {
-    @discardableResult
-    func addToken(_ token: Token) throws -> PersistentToken
-    func updatePersistentToken(_ persistentToken: PersistentToken) throws
-    func moveTokenFromIndex(_ origin: Int, toIndex destination: Int)
-    func deletePersistentToken(_ persistentToken: PersistentToken) throws
+extension Sequence where Element == PersistentToken {
+    func sorted(withIdentifiersOrder identifiers: [String]) -> [PersistentToken] {
+        sorted(by: {
+            let indexOfA = identifiers.firstIndex(of: $0.id)
+            let indexOfB = identifiers.firstIndex(of: $1.id)
+
+            switch (indexOfA, indexOfB) {
+            case let (.some(iA), .some(iB)) where iA < iB:
+                return true
+            default:
+                return false
+            }
+        })
+    }
 }

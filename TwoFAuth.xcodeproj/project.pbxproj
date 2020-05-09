@@ -59,6 +59,24 @@
 		2A56EF0C241A1516002C32F3 /* PasswordManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A56EF0B241A1515002C32F3 /* PasswordManagerViewController.swift */; };
 		2A56EF0F241A1632002C32F3 /* PasswordManagerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A56EF0E241A1632002C32F3 /* PasswordManagerTableViewCell.swift */; };
 		2A56EF11241A26C0002C32F3 /* UIViewController+DisplayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A56EF10241A26C0002C32F3 /* UIViewController+DisplayError.swift */; };
+		2A5BD5A124546BB700688A8D /* WatchServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5BD5A024546BB700688A8D /* WatchServices.swift */; };
+		2A5BD5A324546C2900688A8D /* UserDefaults+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5BD5A224546C2900688A8D /* UserDefaults+Creation.swift */; };
+		2A5BD5A424546C6300688A8D /* UserDefaults+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5BD5A224546C2900688A8D /* UserDefaults+Creation.swift */; };
+		2A5BD5A824548F0500688A8D /* ReplaceableStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5BD5A724548F0500688A8D /* ReplaceableStorage.swift */; };
+		2A5BD5AA24548F3100688A8D /* StorageNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5BD5A924548F3100688A8D /* StorageNotification.swift */; };
+		2A5BD5AB24548F4100688A8D /* StorageNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5BD5A924548F3100688A8D /* StorageNotification.swift */; };
+		2A5BD5AC24548F4200688A8D /* StorageNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5BD5A924548F3100688A8D /* StorageNotification.swift */; };
+		2A5BD5AE24548F7A00688A8D /* ReadonlyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5BD5AD24548F7A00688A8D /* ReadonlyStorage.swift */; };
+		2A5BD5AF24548F8F00688A8D /* ReadonlyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5BD5AD24548F7A00688A8D /* ReadonlyStorage.swift */; };
+		2A5BD5B024548F9000688A8D /* ReadonlyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5BD5AD24548F7A00688A8D /* ReadonlyStorage.swift */; };
+		2A5BD5B22454902B00688A8D /* WatchStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5BD5B12454902B00688A8D /* WatchStorage.swift */; };
+		2A5BD5B32454906200688A8D /* UserDefaults+Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6DA5A624328CAA00590FE1 /* UserDefaults+Storage.swift */; };
+		2A5BD5B52454909500688A8D /* Sequence+PersistentToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5BD5B42454909500688A8D /* Sequence+PersistentToken.swift */; };
+		2A5BD5B6245490A600688A8D /* Sequence+PersistentToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5BD5B42454909500688A8D /* Sequence+PersistentToken.swift */; };
+		2A5BD5B7245490A700688A8D /* Sequence+PersistentToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5BD5B42454909500688A8D /* Sequence+PersistentToken.swift */; };
+		2A5BD5B82454972E00688A8D /* WatchCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A60C93124439AB700AF72CF /* WatchCommand.swift */; };
+		2A5BD5BB2454C53B00688A8D /* WatchDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5BD5BA2454C53B00688A8D /* WatchDataSource.swift */; };
+		2A5BD5BC2454C66700688A8D /* DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6DA4EB2430B02900590FE1 /* DateTime.swift */; };
 		2A5E44C92435CF18006BA067 /* PersistentToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E44C22435CF18006BA067 /* PersistentToken.swift */; };
 		2A5E44CA2435CF18006BA067 /* PersistentToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E44C22435CF18006BA067 /* PersistentToken.swift */; };
 		2A5E44CB2435CF18006BA067 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E44C32435CF18006BA067 /* Token.swift */; };
@@ -104,6 +122,19 @@
 		2A5E867423F8403400027EB8 /* PinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E867323F8403400027EB8 /* PinManager.swift */; };
 		2A5E867623F847C800027EB8 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E867523F847C800027EB8 /* ContainerViewController.swift */; };
 		2A5F347E2269B33800C055F2 /* SmoothingCornersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5F347D2269B33800C055F2 /* SmoothingCornersView.swift */; };
+		2A60C9302443698700AF72CF /* AppDataContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A60C92F2443698700AF72CF /* AppDataContext.swift */; };
+		2A60C93224439AB700AF72CF /* WatchCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A60C93124439AB700AF72CF /* WatchCommand.swift */; };
+		2A60C93324439AF700AF72CF /* AppDataContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A60C92F2443698700AF72CF /* AppDataContext.swift */; };
+		2A60C93524439BBC00AF72CF /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A60C93424439BBC00AF72CF /* SessionManager.swift */; };
+		2A60C9372443A1D200AF72CF /* WCSessionActivationState+CustomDebugStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A60C9362443A1D200AF72CF /* WCSessionActivationState+CustomDebugStringConvertible.swift */; };
+		2A60C9382443A20E00AF72CF /* WCSessionActivationState+CustomDebugStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A60C9362443A1D200AF72CF /* WCSessionActivationState+CustomDebugStringConvertible.swift */; };
+		2A60C93B2443A6E500AF72CF /* WatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A60C93A2443A6E500AF72CF /* WatchModel.swift */; };
+		2A60C93D2443A7A900AF72CF /* PersistentToken+UpdateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A60C93C2443A7A900AF72CF /* PersistentToken+UpdateTime.swift */; };
+		2A60C93E2443A7AC00AF72CF /* PersistentToken+UpdateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A60C93C2443A7A900AF72CF /* PersistentToken+UpdateTime.swift */; };
+		2A60C93F2443A7BC00AF72CF /* PersistentToken+UpdateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A60C93C2443A7A900AF72CF /* PersistentToken+UpdateTime.swift */; };
+		2A60C9412443A91B00AF72CF /* ProgressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A60C9402443A91B00AF72CF /* ProgressModel.swift */; };
+		2A60C9422443A92000AF72CF /* ProgressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A60C9402443A91B00AF72CF /* ProgressModel.swift */; };
+		2A60C9432443A92100AF72CF /* ProgressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A60C9402443A91B00AF72CF /* ProgressModel.swift */; };
 		2A612AC12441A4B80060CC77 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A612ABF2441A4B80060CC77 /* Interface.storyboard */; };
 		2A612AC32441A4BB0060CC77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A612AC22441A4BB0060CC77 /* Assets.xcassets */; };
 		2A612ACA2441A4BB0060CC77 /* WatchApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2A612AC92441A4BB0060CC77 /* WatchApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -126,7 +157,11 @@
 		2A612AF62441B5F90060CC77 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A612AF52441B5F90060CC77 /* Colors.xcassets */; };
 		2A612AF82441B6330060CC77 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A612AF52441B5F90060CC77 /* Colors.xcassets */; };
 		2A612AF92441B6340060CC77 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A612AF52441B5F90060CC77 /* Colors.xcassets */; };
+		2A612AFC2441C6810060CC77 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A612AFB2441C6810060CC77 /* WatchSessionManager.swift */; };
+		2A612AFE244203930060CC77 /* PersistentTokenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A612AFD244203930060CC77 /* PersistentTokenData.swift */; };
+		2A612AFF2442039C0060CC77 /* PersistentTokenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A612AFD244203930060CC77 /* PersistentTokenData.swift */; };
 		2A62CF6C24168A6D00FFF809 /* InsetsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A62CF6B24168A6D00FFF809 /* InsetsTextField.swift */; };
+		2A63D9CE2466BFA400C173B6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A71769E240DA4A500E671A5 /* Constants.swift */; };
 		2A6DA4EC2430B02900590FE1 /* DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6DA4EB2430B02900590FE1 /* DateTime.swift */; };
 		2A6DA55124325BEB00590FE1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A6DA55024325BEB00590FE1 /* Media.xcassets */; };
 		2A6DA55A24325BEB00590FE1 /* One Time Password.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2A6DA54E24325BEB00590FE1 /* One Time Password.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -238,6 +273,7 @@
 		2A92F0A723C6F716001ED209 /* WebsiteEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A92F0A523C6F716001ED209 /* WebsiteEntity+CoreDataClass.swift */; };
 		2A92F0A923C6F717001ED209 /* WebsiteEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A92F0A623C6F716001ED209 /* WebsiteEntity+CoreDataProperties.swift */; };
 		2A930DDD2433A671007A1089 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 2A6F301C24012EC300A50850 /* Localizable.stringsdict */; };
+		2A9A21262466C91E004FFECF /* UserDefaults+FavIconFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A21242466C799004FFECF /* UserDefaults+FavIconFetcher.swift */; };
 		2A9E7DD023F6E77400CDA1EE /* RootFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E7DCF23F6E77400CDA1EE /* RootFlowController.swift */; };
 		2A9E7DD223F6F1C700CDA1EE /* SettingsFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E7DD123F6F1C700CDA1EE /* SettingsFlowController.swift */; };
 		2AA1DE9F23F93B27000F690E /* PinCodeKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA1DE9E23F93B27000F690E /* PinCodeKeyboardView.swift */; };
@@ -264,6 +300,13 @@
 		2ACED29D230D408C003CB498 /* DynamicTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACED29C230D408C003CB498 /* DynamicTypeButton.swift */; };
 		2ACED2A1230D743A003CB498 /* PinManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACED2A0230D743A003CB498 /* PinManagerImpl.swift */; };
 		2ACED2A7230E75E0003CB498 /* CloudSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACED2A6230E75E0003CB498 /* CloudSettingsViewController.swift */; };
+		2ADAC4CB2466CA8800DBAD6C /* UserDefaults+FavIconFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A21242466C799004FFECF /* UserDefaults+FavIconFetcher.swift */; };
+		2ADAC4CC2466CA8E00DBAD6C /* UserDefaults+FavIconFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A21242466C799004FFECF /* UserDefaults+FavIconFetcher.swift */; };
+		2ADAC4CD2466CCDC00DBAD6C /* WebsiteIcons in Resources */ = {isa = PBXBuildFile; fileRef = 2ABA2A6B242A02810092AA78 /* WebsiteIcons */; };
+		2ADAC4CF2466F63700DBAD6C /* WatchFavIconFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADAC4CE2466F63700DBAD6C /* WatchFavIconFetcher.swift */; };
+		2ADAC4D02466F69600DBAD6C /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8B9E3122FC15AF00FF8653 /* ImageCache.swift */; };
+		2ADAC4D12466F6F500DBAD6C /* Bundle+AppBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6DA64A24336A2800590FE1 /* Bundle+AppBundle.swift */; };
+		2ADAC4D22466F87F00DBAD6C /* String+SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA2A6D242A07630092AA78 /* String+SHA256.swift */; };
 		2ADB39632421352300A6F898 /* PinLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB39622421352300A6F898 /* PinLabelView.swift */; };
 		2ADB396524214FD100A6F898 /* PinLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB396424214FD100A6F898 /* PinLabelStyle.swift */; };
 		2ADB396E24261E8700A6F898 /* EmptyPasswordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB396D24261E8700A6F898 /* EmptyPasswordsViewController.swift */; };
@@ -449,6 +492,14 @@
 		2A56EF0B241A1515002C32F3 /* PasswordManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordManagerViewController.swift; sourceTree = "<group>"; };
 		2A56EF0E241A1632002C32F3 /* PasswordManagerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordManagerTableViewCell.swift; sourceTree = "<group>"; };
 		2A56EF10241A26C0002C32F3 /* UIViewController+DisplayError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DisplayError.swift"; sourceTree = "<group>"; };
+		2A5BD5A024546BB700688A8D /* WatchServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchServices.swift; sourceTree = "<group>"; };
+		2A5BD5A224546C2900688A8D /* UserDefaults+Creation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Creation.swift"; sourceTree = "<group>"; };
+		2A5BD5A724548F0500688A8D /* ReplaceableStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceableStorage.swift; sourceTree = "<group>"; };
+		2A5BD5A924548F3100688A8D /* StorageNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageNotification.swift; sourceTree = "<group>"; };
+		2A5BD5AD24548F7A00688A8D /* ReadonlyStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadonlyStorage.swift; sourceTree = "<group>"; };
+		2A5BD5B12454902B00688A8D /* WatchStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchStorage.swift; sourceTree = "<group>"; };
+		2A5BD5B42454909500688A8D /* Sequence+PersistentToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+PersistentToken.swift"; sourceTree = "<group>"; };
+		2A5BD5BA2454C53B00688A8D /* WatchDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDataSource.swift; sourceTree = "<group>"; };
 		2A5E44C22435CF18006BA067 /* PersistentToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersistentToken.swift; path = OneTimePassword/Sources/PersistentToken.swift; sourceTree = "<group>"; };
 		2A5E44C32435CF18006BA067 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Token.swift; path = OneTimePassword/Sources/Token.swift; sourceTree = "<group>"; };
 		2A5E44C42435CF18006BA067 /* OTPKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OTPKeychain.swift; path = OneTimePassword/Sources/OTPKeychain.swift; sourceTree = "<group>"; };
@@ -475,6 +526,13 @@
 		2A5E867323F8403400027EB8 /* PinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinManager.swift; sourceTree = "<group>"; };
 		2A5E867523F847C800027EB8 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		2A5F347D2269B33800C055F2 /* SmoothingCornersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothingCornersView.swift; sourceTree = "<group>"; };
+		2A60C92F2443698700AF72CF /* AppDataContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataContext.swift; sourceTree = "<group>"; };
+		2A60C93124439AB700AF72CF /* WatchCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCommand.swift; sourceTree = "<group>"; };
+		2A60C93424439BBC00AF72CF /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		2A60C9362443A1D200AF72CF /* WCSessionActivationState+CustomDebugStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WCSessionActivationState+CustomDebugStringConvertible.swift"; sourceTree = "<group>"; };
+		2A60C93A2443A6E500AF72CF /* WatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchModel.swift; sourceTree = "<group>"; };
+		2A60C93C2443A7A900AF72CF /* PersistentToken+UpdateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersistentToken+UpdateTime.swift"; sourceTree = "<group>"; };
+		2A60C9402443A91B00AF72CF /* ProgressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressModel.swift; sourceTree = "<group>"; };
 		2A612ABD2441A4B80060CC77 /* WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A612AC02441A4B80060CC77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		2A612AC22441A4BB0060CC77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -488,6 +546,8 @@
 		2A612AE72441A9660060CC77 /* OneTimePasswordRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTimePasswordRow.swift; sourceTree = "<group>"; };
 		2A612AEA2441ABB30060CC77 /* WatchApp Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchApp Extension.entitlements"; sourceTree = "<group>"; };
 		2A612AF52441B5F90060CC77 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		2A612AFB2441C6810060CC77 /* WatchSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
+		2A612AFD244203930060CC77 /* PersistentTokenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentTokenData.swift; sourceTree = "<group>"; };
 		2A62CF6B24168A6D00FFF809 /* InsetsTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetsTextField.swift; sourceTree = "<group>"; };
 		2A6DA4EB2430B02900590FE1 /* DateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTime.swift; sourceTree = "<group>"; };
 		2A6DA54E24325BEB00590FE1 /* One Time Password.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "One Time Password.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -544,6 +604,7 @@
 		2A92F09523C62A51001ED209 /* TFASites.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TFASites.xcdatamodel; sourceTree = "<group>"; };
 		2A92F0A523C6F716001ED209 /* WebsiteEntity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebsiteEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2A92F0A623C6F716001ED209 /* WebsiteEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebsiteEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2A9A21242466C799004FFECF /* UserDefaults+FavIconFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+FavIconFetcher.swift"; sourceTree = "<group>"; };
 		2A9E7DCF23F6E77400CDA1EE /* RootFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFlowController.swift; sourceTree = "<group>"; };
 		2A9E7DD123F6F1C700CDA1EE /* SettingsFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFlowController.swift; sourceTree = "<group>"; };
 		2AA1DE9E23F93B27000F690E /* PinCodeKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCodeKeyboardView.swift; sourceTree = "<group>"; };
@@ -572,6 +633,7 @@
 		2ACED2A6230E75E0003CB498 /* CloudSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudSettingsViewController.swift; sourceTree = "<group>"; };
 		2ADA86BE2435C0D2007C46DD /* CryptoUtils */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CryptoUtils; sourceTree = "<group>"; };
 		2ADA86BF2435C0D2007C46DD /* CloudSync */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CloudSync; sourceTree = "<group>"; };
+		2ADAC4CE2466F63700DBAD6C /* WatchFavIconFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFavIconFetcher.swift; sourceTree = "<group>"; };
 		2ADB39622421352300A6F898 /* PinLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinLabelView.swift; sourceTree = "<group>"; };
 		2ADB396424214FD100A6F898 /* PinLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinLabelStyle.swift; sourceTree = "<group>"; };
 		2ADB396D24261E8700A6F898 /* EmptyPasswordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPasswordsViewController.swift; sourceTree = "<group>"; };
@@ -782,6 +844,7 @@
 		2A218CBF226274910001E44C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2A612AFA2441C66D0060CC77 /* WatchSupport */,
 				2A2430EA2401BDA100ABA4F5 /* Authentication */,
 				2A8B9E3322FC4AE300FF8653 /* FavIconFetcher */,
 				2A7EC083240AF08F00B90A07 /* iCloud Sync */,
@@ -792,6 +855,7 @@
 				2A6DA5CB24331F1E00590FE1 /* AppServices.swift */,
 				2A71769E240DA4A500E671A5 /* Constants.swift */,
 				2A04F6D623F08FB000C20906 /* Services.swift */,
+				2A5BD5A224546C2900688A8D /* UserDefaults+Creation.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -901,6 +965,35 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		2A5BD59F24546BA600688A8D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2A5BD5A624548EF900688A8D /* Storage */,
+				2A60C93424439BBC00AF72CF /* SessionManager.swift */,
+				2A5BD5A024546BB700688A8D /* WatchServices.swift */,
+				2ADAC4CE2466F63700DBAD6C /* WatchFavIconFetcher.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2A5BD5A624548EF900688A8D /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				2A5BD5A724548F0500688A8D /* ReplaceableStorage.swift */,
+				2A5BD5B12454902B00688A8D /* WatchStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		2A5BD5B92454C52B00688A8D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A60C93A2443A6E500AF72CF /* WatchModel.swift */,
+				2A5BD5BA2454C53B00688A8D /* WatchDataSource.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2A5E44C02435CEFB006BA067 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
@@ -972,6 +1065,8 @@
 		2A612ACD2441A4BB0060CC77 /* WatchApp Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2A5BD5B92454C52B00688A8D /* Model */,
+				2A5BD59F24546BA600688A8D /* Services */,
 				2A612AEA2441ABB30060CC77 /* WatchApp Extension.entitlements */,
 				2A612ACE2441A4BB0060CC77 /* InterfaceController.swift */,
 				2A612AD02441A4BB0060CC77 /* ExtensionDelegate.swift */,
@@ -981,6 +1076,18 @@
 				2A612AD82441A4BB0060CC77 /* Info.plist */,
 			);
 			path = "WatchApp Extension";
+			sourceTree = "<group>";
+		};
+		2A612AFA2441C66D0060CC77 /* WatchSupport */ = {
+			isa = PBXGroup;
+			children = (
+				2A612AFB2441C6810060CC77 /* WatchSessionManager.swift */,
+				2A612AFD244203930060CC77 /* PersistentTokenData.swift */,
+				2A60C92F2443698700AF72CF /* AppDataContext.swift */,
+				2A60C93124439AB700AF72CF /* WatchCommand.swift */,
+				2A60C9362443A1D200AF72CF /* WCSessionActivationState+CustomDebugStringConvertible.swift */,
+			);
+			path = WatchSupport;
 			sourceTree = "<group>";
 		};
 		2A6DA54F24325BEB00590FE1 /* OneTimePasswordProvider */ = {
@@ -1089,6 +1196,7 @@
 				2A8B9E3422FC4AF300FF8653 /* FavIconFetcher.swift */,
 				2A8B9E3122FC15AF00FF8653 /* ImageCache.swift */,
 				2ABA2A6D242A07630092AA78 /* String+SHA256.swift */,
+				2A9A21242466C799004FFECF /* UserDefaults+FavIconFetcher.swift */,
 			);
 			path = FavIconFetcher;
 			sourceTree = "<group>";
@@ -1143,6 +1251,8 @@
 				2A218CC0226274AB0001E44C /* OneTimePassword.swift */,
 				2A6DA56724327C2F00590FE1 /* OneTimePassword+Diff.swift */,
 				2A6DA56B24327D7600590FE1 /* OneTimePassword+FormattedTitle.swift */,
+				2A60C93C2443A7A900AF72CF /* PersistentToken+UpdateTime.swift */,
+				2A60C9402443A91B00AF72CF /* ProgressModel.swift */,
 				2A6DA56924327C6A00590FE1 /* String+OneTimePassword.swift */,
 			);
 			path = Models;
@@ -1308,7 +1418,10 @@
 				2AF729182270EF74001D2D21 /* KeychainStorage.swift */,
 				2A2B6B9D241C275300949270 /* PersistentToken+Diff.swift */,
 				2A2B6B98241C10EF00949270 /* PersistentToken+Update.swift */,
+				2A5BD5AD24548F7A00688A8D /* ReadonlyStorage.swift */,
+				2A5BD5B42454909500688A8D /* Sequence+PersistentToken.swift */,
 				2A88E29A24309ED5008B902B /* Storage.swift */,
+				2A5BD5A924548F3100688A8D /* StorageNotification.swift */,
 				2A6DA5A624328CAA00590FE1 /* UserDefaults+Storage.swift */,
 			);
 			path = Storage;
@@ -1505,6 +1618,7 @@
 					};
 					2A612ABC2441A4B80060CC77 = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 					};
 					2A612AC82441A4BB0060CC77 = {
 						CreatedOnToolsVersion = 11.4;
@@ -1580,6 +1694,7 @@
 			files = (
 				2A612AD72441A4BB0060CC77 /* Assets.xcassets in Resources */,
 				2A612AF82441B6330060CC77 /* Colors.xcassets in Resources */,
+				2ADAC4CD2466CCDC00DBAD6C /* WebsiteIcons in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1670,6 +1785,7 @@
 				2A71EA31226384BB008108B3 /* QRScanner.swift in Sources */,
 				2ACED2A1230D743A003CB498 /* PinManagerImpl.swift in Sources */,
 				2AF729272271EDA4001D2D21 /* NavigationTitleView.swift in Sources */,
+				2ADAC4CB2466CA8800DBAD6C /* UserDefaults+FavIconFetcher.swift in Sources */,
 				2AA1DEA323F9694F000F690E /* LockScreenViewController.swift in Sources */,
 				2A5E44E92435CF44006BA067 /* TimeFreeze.swift in Sources */,
 				2A2CD6F022F58EF0008C7BC9 /* AddOTPNavigationController.swift in Sources */,
@@ -1677,6 +1793,7 @@
 				2AF728F8226F31AC001D2D21 /* UserDefaults+Settings.swift in Sources */,
 				2A92F0A723C6F716001ED209 /* WebsiteEntity+CoreDataClass.swift in Sources */,
 				2A6DA5A52432888E00590FE1 /* AppStorage.swift in Sources */,
+				2A60C9302443698700AF72CF /* AppDataContext.swift in Sources */,
 				2A5E44EF2435CF44006BA067 /* NSTimer+ClosureKit.swift in Sources */,
 				2A5E44E72435CF44006BA067 /* NTPPacket.swift in Sources */,
 				2A5E44CF2435CF18006BA067 /* Generator.swift in Sources */,
@@ -1690,23 +1807,27 @@
 				2A7DB20A242F43C500852BA2 /* PasswordManaging.swift in Sources */,
 				2A5E44F92435CF44006BA067 /* NTPProtocol.swift in Sources */,
 				2A6F301424000C9300A50850 /* PinLockdownViewController.swift in Sources */,
+				2A60C9412443A91B00AF72CF /* ProgressModel.swift in Sources */,
 				2A56EF09241971B0002C32F3 /* UIApplication+TopmostController.swift in Sources */,
 				2A4E533122EE3F5C00E5168A /* FormCellModel.swift in Sources */,
 				2A5E867623F847C800027EB8 /* ContainerViewController.swift in Sources */,
 				2AF9A30123FD7824003A46C6 /* PinKeychain.swift in Sources */,
 				2AF26F2B230AB2D7007F9228 /* SwitcherFormCellModel.swift in Sources */,
+				2A5BD5AA24548F3100688A8D /* StorageNotification.swift in Sources */,
 				2A0C6995230FEBFA001B8C90 /* BasePinViewController.swift in Sources */,
 				2A71EA2922633BF8008108B3 /* LocalizedStrings.swift in Sources */,
 				2A5E44C92435CF18006BA067 /* PersistentToken.swift in Sources */,
 				2A4E532D22EDF79500E5168A /* SegmentedFormCellModel.swift in Sources */,
 				2A71769B240D11D300E671A5 /* UIViewController+Keyboard.swift in Sources */,
 				2AF26F1C230A8BEB007F9228 /* SettingsViewController.swift in Sources */,
+				2A612AFE244203930060CC77 /* PersistentTokenData.swift in Sources */,
 				2A2B6BAB241F93F600949270 /* TextInputTraits.swift in Sources */,
 				2A218CB8226237700001E44C /* Styles.swift in Sources */,
 				2A6DA56C24327D7600590FE1 /* OneTimePassword+FormattedTitle.swift in Sources */,
 				2A5E4542243A3463006BA067 /* NSMutableAttributedString+HighlightQuery.swift in Sources */,
 				2A92F0A923C6F717001ED209 /* WebsiteEntity+CoreDataProperties.swift in Sources */,
 				2A39E52922E4993E002EF75B /* AddOTPViewController.swift in Sources */,
+				2A60C93D2443A7A900AF72CF /* PersistentToken+UpdateTime.swift in Sources */,
 				2A5E44EB2435CF44006BA067 /* TimeStorage.swift in Sources */,
 				2ADB39632421352300A6F898 /* PinLabelView.swift in Sources */,
 				2AF7292E22725F0D001D2D21 /* ProgressView.swift in Sources */,
@@ -1760,6 +1881,7 @@
 				2A8A92D42413C52E00CD9D64 /* CloudSetupInfoViewController.swift in Sources */,
 				2AF9A2FF23FD482E003A46C6 /* DataConvertible.swift in Sources */,
 				2A5F347E2269B33800C055F2 /* SmoothingCornersView.swift in Sources */,
+				2A5BD5AE24548F7A00688A8D /* ReadonlyStorage.swift in Sources */,
 				2A478FF624116025008C01B2 /* Crypter.swift in Sources */,
 				2A0C6989230EBA48001B8C90 /* UIView+FindConstraint.swift in Sources */,
 				2AAB20CF24143B2B001F576A /* ImageDescriptionView.swift in Sources */,
@@ -1771,6 +1893,7 @@
 				2A5E44CB2435CF18006BA067 /* Token.swift in Sources */,
 				2ABA2A6E242A07630092AA78 /* String+SHA256.swift in Sources */,
 				2A6DA5C62432A23000590FE1 /* AppPasswordListViewController.swift in Sources */,
+				2A5BD5B52454909500688A8D /* Sequence+PersistentToken.swift in Sources */,
 				2A5E4540243A0C0C006BA067 /* CloudManager.swift in Sources */,
 				2A6DA5BB24329B6100590FE1 /* AppMainModel.swift in Sources */,
 				2AF9A30323FD7894003A46C6 /* Pin.swift in Sources */,
@@ -1784,6 +1907,7 @@
 				2A0031DA24142BA3003CE3F8 /* CloudAccountProblemViewController.swift in Sources */,
 				2A1AE73023F2A0C200179A6E /* UIViewController+Containment.swift in Sources */,
 				2A478FEA24103525008C01B2 /* CloudProbe.swift in Sources */,
+				2A612AFC2441C6810060CC77 /* WatchSessionManager.swift in Sources */,
 				2AF26F2D230AB345007F9228 /* SwitcherFormTableViewCell.swift in Sources */,
 				2A5E44F72435CF44006BA067 /* InternetAddress.swift in Sources */,
 				2A4E533322EED63100E5168A /* AddOTPManualViewController.swift in Sources */,
@@ -1791,6 +1915,7 @@
 				2AFC3AE32404F67300B0B886 /* DevicesCompatibility.swift in Sources */,
 				2ACE88BB226686F000ED24B5 /* ScannerViewController.swift in Sources */,
 				2ADB396E24261E8700A6F898 /* EmptyPasswordsViewController.swift in Sources */,
+				2A5BD5A324546C2900688A8D /* UserDefaults+Creation.swift in Sources */,
 				2A8A92D12413C15400CD9D64 /* CloudSetupFlowController.swift in Sources */,
 				2ACED2A7230E75E0003CB498 /* CloudSettingsViewController.swift in Sources */,
 				2A5E44ED2435CF44006BA067 /* DNSResolver.swift in Sources */,
@@ -1815,6 +1940,8 @@
 				2A5E453D243A0275006BA067 /* PasswordListHeaderView.swift in Sources */,
 				2ACE887B2264A4AC00ED24B5 /* QRCodeProcessor.swift in Sources */,
 				2AF9A2FD23FD1D35003A46C6 /* SecureTime.swift in Sources */,
+				2A60C93224439AB700AF72CF /* WatchCommand.swift in Sources */,
+				2A60C9372443A1D200AF72CF /* WCSessionActivationState+CustomDebugStringConvertible.swift in Sources */,
 				2A5E44D12435CF18006BA067 /* Crypto.swift in Sources */,
 				2A7EC085240AF0AA00B90A07 /* Error+CKErrorUserDescription.swift in Sources */,
 				2AF729192270EF74001D2D21 /* KeychainStorage.swift in Sources */,
@@ -1826,20 +1953,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A5BD5B32454906200688A8D /* UserDefaults+Storage.swift in Sources */,
 				2A612AEB2441AC3A0060CC77 /* Crypto.swift in Sources */,
+				2ADAC4CF2466F63700DBAD6C /* WatchFavIconFetcher.swift in Sources */,
 				2A612AF22441AC3F0060CC77 /* MF_Base32Additions.m in Sources */,
 				2A612AD52441A4BB0060CC77 /* ComplicationController.swift in Sources */,
+				2ADAC4D02466F69600DBAD6C /* ImageCache.swift in Sources */,
+				2A9A21262466C91E004FFECF /* UserDefaults+FavIconFetcher.swift in Sources */,
 				2A612AD12441A4BB0060CC77 /* ExtensionDelegate.swift in Sources */,
 				2A612ACF2441A4BB0060CC77 /* InterfaceController.swift in Sources */,
+				2A60C93E2443A7AC00AF72CF /* PersistentToken+UpdateTime.swift in Sources */,
+				2A63D9CE2466BFA400C173B6 /* Constants.swift in Sources */,
 				2A612AEF2441AC3A0060CC77 /* PersistentToken.swift in Sources */,
+				2A5BD5BC2454C66700688A8D /* DateTime.swift in Sources */,
+				2A5BD5A824548F0500688A8D /* ReplaceableStorage.swift in Sources */,
 				2A612AEC2441AC3A0060CC77 /* Generator.swift in Sources */,
 				2A612AED2441AC3A0060CC77 /* KeychainWrapper.swift in Sources */,
 				2A612AF02441AC3A0060CC77 /* Token.swift in Sources */,
 				2A612AF32441AC5C0060CC77 /* String+OneTimePassword.swift in Sources */,
+				2A60C9432443A92100AF72CF /* ProgressModel.swift in Sources */,
 				2A612AEE2441AC3A0060CC77 /* OTPKeychain.swift in Sources */,
+				2A5BD5A124546BB700688A8D /* WatchServices.swift in Sources */,
+				2A5BD5BB2454C53B00688A8D /* WatchDataSource.swift in Sources */,
+				2A5BD5B22454902B00688A8D /* WatchStorage.swift in Sources */,
 				2A612AF12441AC3A0060CC77 /* Token+URL.swift in Sources */,
+				2A5BD5AC24548F4200688A8D /* StorageNotification.swift in Sources */,
+				2ADAC4D12466F6F500DBAD6C /* Bundle+AppBundle.swift in Sources */,
+				2A612AFF2442039C0060CC77 /* PersistentTokenData.swift in Sources */,
+				2A5BD5B024548F9000688A8D /* ReadonlyStorage.swift in Sources */,
 				2A612AE92441A9E60060CC77 /* OneTimePassword.swift in Sources */,
+				2ADAC4D22466F87F00DBAD6C /* String+SHA256.swift in Sources */,
+				2A60C93B2443A6E500AF72CF /* WatchModel.swift in Sources */,
+				2A60C9382443A20E00AF72CF /* WCSessionActivationState+CustomDebugStringConvertible.swift in Sources */,
 				2A612AE82441A9660060CC77 /* OneTimePasswordRow.swift in Sources */,
+				2A5BD5B7245490A700688A8D /* Sequence+PersistentToken.swift in Sources */,
+				2A60C93324439AF700AF72CF /* AppDataContext.swift in Sources */,
+				2A60C93524439BBC00AF72CF /* SessionManager.swift in Sources */,
+				2A5BD5B82454972E00688A8D /* WatchCommand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1868,9 +2018,13 @@
 				2A5E44F62435CF44006BA067 /* Clock.swift in Sources */,
 				2A6DA5922432854D00590FE1 /* PinFailedAttempt.swift in Sources */,
 				2A6DA5DB243352BD00590FE1 /* PinCodeKeyboardButton.swift in Sources */,
+				2A5BD5A424546C6300688A8D /* UserDefaults+Creation.swift in Sources */,
 				2A5E453E243A02E6006BA067 /* PasswordListHeaderView.swift in Sources */,
+				2A5BD5B6245490A600688A8D /* Sequence+PersistentToken.swift in Sources */,
+				2A5BD5AF24548F8F00688A8D /* ReadonlyStorage.swift in Sources */,
 				2A5E44E82435CF44006BA067 /* NTPPacket.swift in Sources */,
 				2A6DA58E2432852900590FE1 /* AuthenticationManager.swift in Sources */,
+				2A60C9422443A92000AF72CF /* ProgressModel.swift in Sources */,
 				2A6DA5C024329F2500590FE1 /* UIView+Autolayout.swift in Sources */,
 				2A6DA5762432802000590FE1 /* TFAImageEffects.m in Sources */,
 				2A5E44D22435CF18006BA067 /* Crypto.swift in Sources */,
@@ -1881,6 +2035,7 @@
 				2A6DA57124327FA500590FE1 /* WebsiteEntity+CoreDataProperties.swift in Sources */,
 				2A6DA5AE2432941500590FE1 /* OneTimePasswordCell.swift in Sources */,
 				2A5E44F22435CF44006BA067 /* Data+Bytes.swift in Sources */,
+				2A5BD5AB24548F4100688A8D /* StorageNotification.swift in Sources */,
 				2A6DA5D92433529200590FE1 /* UIViewController+Containment.swift in Sources */,
 				2A5E44EE2435CF44006BA067 /* DNSResolver.swift in Sources */,
 				2A6DA57224327FA500590FE1 /* FavIconFetcher.swift in Sources */,
@@ -1916,7 +2071,9 @@
 				2A5E4543243A5C07006BA067 /* NSMutableAttributedString+HighlightQuery.swift in Sources */,
 				2A6DA5C32432A06A00590FE1 /* UIView+Containment.swift in Sources */,
 				2A6DA5C12432A04B00590FE1 /* MainFlowController.swift in Sources */,
+				2ADAC4CC2466CA8E00DBAD6C /* UserDefaults+FavIconFetcher.swift in Sources */,
 				2A5E44F82435CF44006BA067 /* InternetAddress.swift in Sources */,
+				2A60C93F2443A7BC00AF72CF /* PersistentToken+UpdateTime.swift in Sources */,
 				2A6DA5D12433524000590FE1 /* PinInputView.swift in Sources */,
 				2A6DA5DE24335BA200590FE1 /* ProviderRootFlowController.swift in Sources */,
 				2A6DA5D02433522B00590FE1 /* PinController.swift in Sources */,
@@ -2185,15 +2342,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMPANION_APP_BUNDLE_IDENTIFIER = app.2fauth.debug;
 				DEVELOPMENT_TEAM = 6PMBQR35S8;
 				IBSC_MODULE = WatchApp_Extension;
 				INFOPLIST_FILE = WatchApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.2fauth.debug.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
@@ -2205,15 +2369,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMPANION_APP_BUNDLE_IDENTIFIER = app.2fauth.screenshot;
 				DEVELOPMENT_TEAM = 6PMBQR35S8;
 				IBSC_MODULE = WatchApp_Extension;
 				INFOPLIST_FILE = WatchApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.2fauth.screenshot.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
@@ -2225,11 +2396,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMPANION_APP_BUNDLE_IDENTIFIER = app.2fauth;
 				DEVELOPMENT_TEAM = 6PMBQR35S8;
 				IBSC_MODULE = WatchApp_Extension;
 				INFOPLIST_FILE = WatchApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.2fauth.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
