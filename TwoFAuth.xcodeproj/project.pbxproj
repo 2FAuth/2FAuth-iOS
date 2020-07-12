@@ -162,6 +162,7 @@
 		2A612AFF2442039C0060CC77 /* PersistentTokenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A612AFD244203930060CC77 /* PersistentTokenData.swift */; };
 		2A62CF6C24168A6D00FFF809 /* InsetsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A62CF6B24168A6D00FFF809 /* InsetsTextField.swift */; };
 		2A63D9CE2466BFA400C173B6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A71769E240DA4A500E671A5 /* Constants.swift */; };
+		2A6688F924BB97C9008E10F0 /* UserDefaults+Migration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6688F824BB97C9008E10F0 /* UserDefaults+Migration.swift */; };
 		2A6DA4EC2430B02900590FE1 /* DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6DA4EB2430B02900590FE1 /* DateTime.swift */; };
 		2A6DA55124325BEB00590FE1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A6DA55024325BEB00590FE1 /* Media.xcassets */; };
 		2A6DA55A24325BEB00590FE1 /* One Time Password.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2A6DA54E24325BEB00590FE1 /* One Time Password.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -326,6 +327,7 @@
 		2AF26F2F230AB36B007F9228 /* GroupedSwitcherFormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF26F2E230AB36B007F9228 /* GroupedSwitcherFormTableViewCell.swift */; };
 		2AF26F32230AF29E007F9228 /* SetupPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF26F31230AF29E007F9228 /* SetupPinViewController.swift */; };
 		2AF26F35230B2014007F9228 /* NumericPinField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF26F34230B2014007F9228 /* NumericPinField.swift */; };
+		2AF3A77824B3A91400BED486 /* Migration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF3A77724B3A91400BED486 /* Migration.swift */; };
 		2AF728E8226C8C52001D2D21 /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF728E7226C8C52001D2D21 /* Debouncer.swift */; };
 		2AF728EA226CC331001D2D21 /* AnimatableShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF728E9226CC331001D2D21 /* AnimatableShapeLayer.swift */; };
 		2AF728F3226D9338001D2D21 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AF728F2226D9338001D2D21 /* CloudKit.framework */; };
@@ -549,6 +551,7 @@
 		2A612AFB2441C6810060CC77 /* WatchSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
 		2A612AFD244203930060CC77 /* PersistentTokenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentTokenData.swift; sourceTree = "<group>"; };
 		2A62CF6B24168A6D00FFF809 /* InsetsTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetsTextField.swift; sourceTree = "<group>"; };
+		2A6688F824BB97C9008E10F0 /* UserDefaults+Migration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Migration.swift"; sourceTree = "<group>"; };
 		2A6DA4EB2430B02900590FE1 /* DateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTime.swift; sourceTree = "<group>"; };
 		2A6DA54E24325BEB00590FE1 /* One Time Password.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "One Time Password.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A6DA55024325BEB00590FE1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
@@ -652,6 +655,7 @@
 		2AF26F2E230AB36B007F9228 /* GroupedSwitcherFormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedSwitcherFormTableViewCell.swift; sourceTree = "<group>"; };
 		2AF26F31230AF29E007F9228 /* SetupPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPinViewController.swift; sourceTree = "<group>"; };
 		2AF26F34230B2014007F9228 /* NumericPinField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericPinField.swift; sourceTree = "<group>"; };
+		2AF3A77724B3A91400BED486 /* Migration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Migration.swift; sourceTree = "<group>"; };
 		2AF728DD226BE568001D2D21 /* TwoFAuthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwoFAuthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AF728E1226BE568001D2D21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AF728E7226C8C52001D2D21 /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
@@ -844,6 +848,7 @@
 		2A218CBF226274910001E44C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2AF3A77624B3A8F500BED486 /* Migration */,
 				2A612AFA2441C66D0060CC77 /* WatchSupport */,
 				2A2430EA2401BDA100ABA4F5 /* Authentication */,
 				2A8B9E3322FC4AE300FF8653 /* FavIconFetcher */,
@@ -1389,6 +1394,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		2AF3A77624B3A8F500BED486 /* Migration */ = {
+			isa = PBXGroup;
+			children = (
+				2AF3A77724B3A91400BED486 /* Migration.swift */,
+				2A6688F824BB97C9008E10F0 /* UserDefaults+Migration.swift */,
+			);
+			path = Migration;
+			sourceTree = "<group>";
+		};
 		2AF728DE226BE568001D2D21 /* TwoFAuthTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -1799,6 +1813,7 @@
 				2A5E44CF2435CF18006BA067 /* Generator.swift in Sources */,
 				2AF7292122717987001D2D21 /* MainDataSource.swift in Sources */,
 				2AA1DEB523FBD471000F690E /* UIViewController+ChildTransitions.swift in Sources */,
+				2AF3A77824B3A91400BED486 /* Migration.swift in Sources */,
 				2AF9A30523FD82DE003A46C6 /* PinFailedAttempt.swift in Sources */,
 				2A8A92CF2413AC3C00CD9D64 /* CloudStatusViewController.swift in Sources */,
 				2AF26F32230AF29E007F9228 /* SetupPinViewController.swift in Sources */,
@@ -1822,6 +1837,7 @@
 				2AF26F1C230A8BEB007F9228 /* SettingsViewController.swift in Sources */,
 				2A612AFE244203930060CC77 /* PersistentTokenData.swift in Sources */,
 				2A2B6BAB241F93F600949270 /* TextInputTraits.swift in Sources */,
+				2A6688F924BB97C9008E10F0 /* UserDefaults+Migration.swift in Sources */,
 				2A218CB8226237700001E44C /* Styles.swift in Sources */,
 				2A6DA56C24327D7600590FE1 /* OneTimePassword+FormattedTitle.swift in Sources */,
 				2A5E4542243A3463006BA067 /* NSMutableAttributedString+HighlightQuery.swift in Sources */,

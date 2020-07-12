@@ -267,7 +267,7 @@ extension SetupPinViewController: PinInputViewDelegate {
                                   animateToTheLeft: false,
                                   completion: {
                                       self.verifyPinView.pinField.clear()
-                                  })
+                })
             }
         }
     }

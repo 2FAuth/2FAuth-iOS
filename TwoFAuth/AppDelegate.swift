@@ -15,6 +15,7 @@
 //  limitations under the License.
 //
 
+import os.log
 import UIKit
 
 @UIApplicationMain
@@ -26,6 +27,12 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        os_log("App State: %{public}@", log: .default, type: .info, #function)
+
+        if Migration.migrateKeychainStorageOptions(userDefaults: UserDefaults.appGroupDefaults()) == false {
+            preconditionFailure("Failed to perform keychain migration")
+        }
+
         let services: AppServices
         #if SCREENSHOT
             if CommandLine.isDemoMode {
@@ -54,6 +61,22 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = window
 
         return true
+    }
+
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        os_log("App State: %{public}@", log: .default, type: .info, #function)
+    }
+
+    func applicationWillResignActive(_ application: UIApplication) {
+        os_log("App State: %{public}@", log: .default, type: .info, #function)
+    }
+
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        os_log("App State: %{public}@", log: .default, type: .info, #function)
+    }
+
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        os_log("App State: %{public}@", log: .default, type: .info, #function)
     }
 
     func application(_ application: UIApplication,
