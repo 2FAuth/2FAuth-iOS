@@ -1,14 +1,14 @@
 # 2FAuth
 
 ![Tests](https://github.com/2FAuth/2FAuth-iOS/workflows/Tests/badge.svg)
-[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/2FAuth/2FAuth-iOS/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/2FAuth/2FAuth-iOS/blob/main/LICENSE)
 [![Swift 5.1](https://img.shields.io/badge/swift-5.1-orange.svg)](#Getting-Started)
 ![Platform](https://img.shields.io/badge/platform-iOS-blue)
 
 Two-Factor Authenticator App you dream about.
 
 <p align="center">
-<img src="https://github.com/2FAuth/2FAuth-iOS/raw/master/.assets/screenshots.png?raw=true" alt="2FAuth Screenshots" height="320">
+<img src="https://github.com/2FAuth/2FAuth-iOS/raw/main/.assets/screenshots.png?raw=true" alt="2FAuth Screenshots" height="320">
 </p>
 
 [![Download on the AppStore](https://linkmaker.itunes.apple.com/en-gb/badge-lrg.svg?releaseDate=2017-07-19&kind=iossoftware&bubble=ios_apps)](https://apps.apple.com/app/2fauth/id1505207634)
@@ -53,11 +53,11 @@ Your data never leaves your devices. If you enable iCloud Sync data will be tran
 
 2FAuth uses [NTP protocol](https://en.wikipedia.org/wiki/Network_Time_Protocol) to get the current secure time . Feel free to use any traffic monitor (e.g., [Charles](https://www.charlesproxy.com)) to check it yourself.
 
-All website favicons are bundled in the app. There's a standalone [internal tool](https://github.com/2FAuth/2FAuth-iOS/tree/master/TwoFAuthFavIconExporter) that uses https://twofactorauth.org database to fetch all websites supporting 2FA.
+All website favicons are bundled in the app. There's a standalone [internal tool](https://github.com/2FAuth/2FAuth-iOS/tree/main/TwoFAuthFavIconExporter) that uses https://twofactorauth.org database to fetch all websites supporting 2FA.
 
 ## Privacy Policy
 
-See [PrivacyPolicy.txt](https://github.com/2FAuth/2FAuth-iOS/blob/master/PrivacyPolicy.txt)
+See [PrivacyPolicy.txt](https://github.com/2FAuth/2FAuth-iOS/blob/main/PrivacyPolicy.txt)
 
 ## Special thanks
 
