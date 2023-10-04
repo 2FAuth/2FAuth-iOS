@@ -71,6 +71,13 @@ enum Styles {
         static let refreshIcon = UIImage(named: "icon-refresh")!
         static let issuerPlaceholder = UIImage(named: "issuer-placeholder")!
         static let settingsIcon = UIImage(named: "icon-settings")!
+        static var opticIDIcon: UIImage? {
+            if #available(iOS 13.0, *) {
+                return UIImage(systemName: "opticid")
+            } else {
+                return nil
+            }
+        }
         static let faceIDIcon = UIImage(named: "icon-face-id")!
         static let touchIDIcon = UIImage(named: "icon-touch-id")!
         static let lockIcon = UIImage(named: "icon-lock")!

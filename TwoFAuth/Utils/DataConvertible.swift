@@ -25,8 +25,7 @@ protocol DataConvertible {
 
 extension DataConvertible {
     var data: Data {
-        var copy = self
-        return Data(bytes: &copy, count: MemoryLayout<Self>.size)
+        withUnsafeBytes(of: self) { Data($0) }
     }
 
     init?(data: Data) {

@@ -48,6 +48,7 @@ class StylesTest: XCTestCase {
         XCTAssertNotNil(images.refreshIcon)
         XCTAssertNotNil(images.issuerPlaceholder)
         XCTAssertNotNil(images.settingsIcon)
+        XCTAssertNotNil(images.opticIDIcon)
         XCTAssertNotNil(images.faceIDIcon)
         XCTAssertNotNil(images.touchIDIcon)
         XCTAssertNotNil(images.lockIcon)

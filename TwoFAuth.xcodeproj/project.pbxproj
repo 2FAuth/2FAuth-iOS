@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -107,7 +107,7 @@
 		2A62CF6C24168A6D00FFF809 /* InsetsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A62CF6B24168A6D00FFF809 /* InsetsTextField.swift */; };
 		2A6DA4EC2430B02900590FE1 /* DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6DA4EB2430B02900590FE1 /* DateTime.swift */; };
 		2A6DA55124325BEB00590FE1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A6DA55024325BEB00590FE1 /* Media.xcassets */; };
-		2A6DA55A24325BEB00590FE1 /* One Time Password.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2A6DA54E24325BEB00590FE1 /* One Time Password.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2A6DA55A24325BEB00590FE1 /* One Time Password.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2A6DA54E24325BEB00590FE1 /* One Time Password.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A6DA561243275CC00590FE1 /* Preprocessing.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A6DA560243275CC00590FE1 /* Preprocessing.js */; };
 		2A6DA56824327C2F00590FE1 /* OneTimePassword+Diff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6DA56724327C2F00590FE1 /* OneTimePassword+Diff.swift */; };
 		2A6DA56A24327C6A00590FE1 /* String+OneTimePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6DA56924327C6A00590FE1 /* String+OneTimePassword.swift */; };
@@ -304,15 +304,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2A6DA55B24325BEB00590FE1 /* Embed App Extensions */ = {
+		2A6DA55B24325BEB00590FE1 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				2A6DA55A24325BEB00590FE1 /* One Time Password.appex in Embed App Extensions */,
+				2A6DA55A24325BEB00590FE1 /* One Time Password.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2A6DA5802432829900590FE1 /* Embed Frameworks */ = {
@@ -1258,7 +1258,7 @@
 				2A218C952261FE3B0001E44C /* Sources */,
 				2A218C962261FE3B0001E44C /* Frameworks */,
 				2A218C972261FE3B0001E44C /* Resources */,
-				2A6DA55B24325BEB00590FE1 /* Embed App Extensions */,
+				2A6DA55B24325BEB00590FE1 /* Embed Foundation Extensions */,
 				2A6DA582243282C300590FE1 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -1338,8 +1338,9 @@
 		2A218C912261FE3B0001E44C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1500;
 				ORGANIZATIONNAME = 2FAuth;
 				TargetAttributes = {
 					2A218C982261FE3B0001E44C = {
@@ -1827,6 +1828,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1852,7 +1854,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1888,6 +1890,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1907,7 +1910,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1929,11 +1932,14 @@
 				CURRENT_PROJECT_VERSION = 44;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6PMBQR35S8;
+				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = TwoFAuth/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = app.2fauth.debug;
 				PRODUCT_MODULE_NAME = TwoFAuth;
 				PRODUCT_NAME = 2FAuth;
@@ -1956,11 +1962,14 @@
 				CURRENT_PROJECT_VERSION = 44;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6PMBQR35S8;
+				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = TwoFAuth/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = app.2fauth;
 				PRODUCT_MODULE_NAME = TwoFAuth;
 				PRODUCT_NAME = 2FAuth;
@@ -1996,6 +2005,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -2021,7 +2031,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2043,11 +2053,14 @@
 				CURRENT_PROJECT_VERSION = 44;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6PMBQR35S8;
+				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = TwoFAuth/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = app.2fauth.screenshot;
 				PRODUCT_MODULE_NAME = TwoFAuth;
 				PRODUCT_NAME = 2FAuth;
@@ -2070,7 +2083,6 @@
 					"$(SRCROOT)",
 				);
 				INFOPLIST_FILE = TwoFAuthTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2089,7 +2101,6 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TwoFAuthScreenshots/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2112,7 +2123,6 @@
 				CURRENT_PROJECT_VERSION = 44;
 				DEVELOPMENT_TEAM = 6PMBQR35S8;
 				INFOPLIST_FILE = OneTimePasswordProvider/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../../Frameworks",
@@ -2137,7 +2147,6 @@
 				CURRENT_PROJECT_VERSION = 44;
 				DEVELOPMENT_TEAM = 6PMBQR35S8;
 				INFOPLIST_FILE = OneTimePasswordProvider/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../../Frameworks",
@@ -2162,7 +2171,6 @@
 				CURRENT_PROJECT_VERSION = 44;
 				DEVELOPMENT_TEAM = 6PMBQR35S8;
 				INFOPLIST_FILE = OneTimePasswordProvider/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../../Frameworks",
@@ -2183,7 +2191,6 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TwoFAuthScreenshots/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2202,7 +2209,6 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TwoFAuthScreenshots/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2228,7 +2234,6 @@
 					"$(SRCROOT)",
 				);
 				INFOPLIST_FILE = TwoFAuthTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2254,7 +2259,6 @@
 					"$(SRCROOT)",
 				);
 				INFOPLIST_FILE = TwoFAuthTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

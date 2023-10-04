@@ -39,6 +39,8 @@ final class AuthenticationManager {
             return true
         case .faceID:
             return true
+        case .opticID:
+            return true
         @unknown default:
             return false
         }

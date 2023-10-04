@@ -20,6 +20,9 @@ public extension CKContainer {
             case .noAccount:
                 os_log("Account status: No Account", log: log, type: .info)
                 completion(error ?? CKError(.notAuthenticated))
+            case .temporarilyUnavailable:
+                os_log("Account status: Temporarily Unavailable", log: log, type: .info)
+                completion(error ?? CKError(.serviceUnavailable))
             @unknown default:
                 preconditionFailure("Unhandled account status")
             }

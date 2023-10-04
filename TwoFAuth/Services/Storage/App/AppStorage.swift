@@ -305,7 +305,7 @@ private extension AppStorage {
             }
         }
         persistentTokens = persistentTokensCopy
-        _ = saveTokenOrderLocally()
+        saveTokenOrderLocally()
 
         notifyUpdate()
     }

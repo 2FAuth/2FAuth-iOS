@@ -31,6 +31,8 @@ extension AuthenticationManager {
             return LocalizedStrings.passcodeAndTouchID
         case .faceID:
             return LocalizedStrings.passcodeAndFaceID
+        case .opticID:
+            return LocalizedStrings.passcodeAndOpticID
         @unknown default:
             return LocalizedStrings.passcode
         }
@@ -48,6 +50,8 @@ extension AuthenticationManager {
             return LocalizedStrings.unlockWithTouchID
         case .faceID:
             return LocalizedStrings.unlockWithFaceID
+        case .opticID:
+            return LocalizedStrings.unlockWithOpticID
         @unknown default:
             return nil
         }
@@ -65,6 +69,8 @@ extension AuthenticationManager {
             return Styles.Images.touchIDIcon
         case .faceID:
             return Styles.Images.faceIDIcon
+        case .opticID:
+            return Styles.Images.opticIDIcon
         @unknown default:
             return nil
         }
