@@ -1,5 +1,7 @@
 # 2FAuth
 
+## The app still works as is, but it is no longer maintained and is [not available](https://github.com/2FAuth/2FAuth-iOS/issues/7) in the App Store.
+
 ![Tests](https://github.com/2FAuth/2FAuth-iOS/workflows/Tests/badge.svg)
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/2FAuth/2FAuth-iOS/blob/main/LICENSE)
 [![Swift 5.1](https://img.shields.io/badge/swift-5.1-orange.svg)](#Getting-Started)
@@ -11,7 +13,6 @@ Two-Factor Authenticator App you dream about.
 <img src="https://github.com/2FAuth/2FAuth-iOS/raw/main/.assets/screenshots.png?raw=true" alt="2FAuth Screenshots" height="320">
 </p>
 
-[![Download on the AppStore](https://linkmaker.itunes.apple.com/en-gb/badge-lrg.svg?releaseDate=2017-07-19&kind=iossoftware&bubble=ios_apps)](https://apps.apple.com/app/2fauth/id1505207634)
 
 ## Features
 
